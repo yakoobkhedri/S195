@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>ورود</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+</head>
+
+<body class="bg-lg-white">
+
+  <section class="position-relative">
+    <div class="container h-100vh h-lg-auto">
+      <div class="g-3 row mt-0 mx-0 px-0 align-items-center h-100">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <div class="py-sm-5 py-4 px-sm-4 px-3 max-w-572 mx-auto bg-white rounded-40 rounded-sm-24 my-64">
+            <a class="d-block">
+              <img alt="logo" src="images/logo.png" class="mx-auto d-block img-fluid">
+            </a>
+            <div class="mt-5 max-w-492 mx-auto">
+              <form>
+                <div class="fw-Medium">
+                  <label class="text-black2">اطلاعات زیر را کامل کنید.</label>
+                </div>
+                <div class="mt-4 fs-14 fw-bold">
+                  <label>نام کاربری</label>
+                  <input class="d-block mt-2 w-100 h-48 rounded-8 bg-input border-input outline-none px-3">
+                </div>
+                <div class="mt-4 fs-14 fw-bold">
+                  <label>رمز عبور</label>
+                  <div class="position-relative">
+                    <!-- اینپوت رمز عبور -->
+                    <input type="password" id="passwordInput"
+                      class="d-block mt-2 w-100 h-48 rounded-8 bg-input border-input outline-none px-3"
+                      placeholder="رمز عبور خود را وارد کنید">
+                    <!-- دکمه تغییر وضعیت دید -->
+                    <div class="position-absolute left-8 top-12 cursor-pointer" id="togglePassword">
+                      <!-- آیکون 'چشم باز' (مشاهده) - پیش‌فرض مخفی -->
+                      <img class="seen" id="iconEye" alt="مشاهده رمز"
+                        src="images/icons/icon(1).svg" width="24" height="24">
+                      <!-- آیکون 'چشم بسته' (مخفی) - پیش‌فرض مخفی -->
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="unseen text-main bi bi-eye-slash d-none" id="iconEyeSlash" viewBox="0 0 16 16">
+                        <path
+                          d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7 7 0 0 0-2.79.588l.77.771A6 6 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755q-.247.248-.517.486z" />
+                        <path
+                          d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829" />
+                        <path
+                          d="M3.35 5.47q-.27.24-.518.487A13 13 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7 7 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 d-lg-block d-none">
+          <img alt="img" src="images/Frame 1890164350.png"
+            class="w-38 w-xl-44 rounded-r-60 h-100 position-fixed start-0 top-0 bottom-0">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/show-password.js"></script>
+</body>
+
+</html>
