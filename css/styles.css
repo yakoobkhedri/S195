@@ -72,13 +72,44 @@ a {
 .nav-pills .nav-link.active svg.second path {
     stroke: white;
 }
+/* gap */
+.gap-40{
+    gap: 40px;
+}
+/* accordion */
+.accordion-btn svg{
+    transition: all .4s;
+}
+.accordion-btn.active svg:last-child{
+    transform: rotate(180deg);
+}
+.accordion-content{
+    max-height: 0;
+    transition: all .4s;
+    overflow: hidden;
+}
+.accordion-content.active{
+    max-height: 2000px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
 /* hover */
-.hover1{
+.hover1,.hover2,.hover2 svg path,.hover3{
     transition: all .4s;
     cursor: pointer;
 }
 .hover1:hover{
     background-color: #104292;
+}
+.hover2:hover,.hover2.active{
+    background-color: #2658A8;
+    color: white;
+}
+.hover2:hover svg path,.hover2.active svg path{
+    stroke: white;
+}
+.hover3:hover{
+    color: #2658A8 !important;
 }
 /* checkbox */
 .form-check-input:checked {
@@ -156,7 +187,9 @@ a {
 .w-38 {
     width: 38%;
 }
-
+.w-269{
+    width: 269px;
+}
 /* height */
 .h-38 {
     height: 38px;
@@ -177,7 +210,14 @@ a {
 .p-10 {
     padding: 10px;
 }
-
+.py-10{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.py-40{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
 /* margin */
 .mt-40 {
     margin-top: 40px;
@@ -256,7 +296,9 @@ a {
 .bg-main {
     background-color: #2658A8;
 }
-
+.bg-main-2{
+    background-color: #F3F6FC;
+}
 .bg-blue-20 {
     background-color: #1EB4EB33;
 }
@@ -278,11 +320,17 @@ a {
 .rounded-8 {
     border-radius: 8px !important;
 }
-
+.rounded-12 {
+    border-radius: 12px;
+}
 .rounded-16 {
     border-radius: 16px;
 }
 
+.rounded-l-24{
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+}
 .rounded-40 {
     border-radius: 40px;
 }
