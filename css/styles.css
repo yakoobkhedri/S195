@@ -94,7 +94,7 @@ a {
     padding-bottom: 16px;
 }
 /* hover */
-.hover1,.hover2,.hover2 svg path,.hover3{
+.hover1,.hover2,.hover2 svg path,.hover3,.hover4,.hover5,.hover6,.hover7{
     transition: all .4s;
     cursor: pointer;
 }
@@ -110,6 +110,22 @@ a {
 }
 .hover3:hover{
     color: #2658A8 !important;
+}
+.hover4:hover,.hover4.active{
+    border: 2px solid #5A8ED6;
+    color: #272727;
+}
+.hover5:hover,.hover5.active{
+    border: 2px solid #F7A344;
+    color: #272727;
+}
+.hover6:hover,.hover6.active{
+    border: 2px solid #52C41A;
+    color: #272727;
+}
+.hover7:hover,.hover7.active{
+    border: 2px solid #FF4D4F;
+    color: #272727;
 }
 /* checkbox */
 .form-check-input:checked {
@@ -198,6 +214,9 @@ a {
 .h-48 {
     height: 48px;
 }
+.h-93vh{
+    height: 93vh;
+}
 .h-100vh{
     height: 100vh;
 }
@@ -213,6 +232,9 @@ a {
 .py-10{
     padding-top: 10px;
     padding-bottom: 10px;
+}
+.p-40{
+    padding: 40px;
 }
 .py-40{
     padding-top: 40px;
@@ -291,7 +313,27 @@ a {
 .border-input {
     border: 1px solid #F5F5F5;
 }
-
+.border-t-gray{
+    border-top: 1.5px solid #F3F6FC;
+}
+.border-b-gray{
+    border-bottom: 2px solid #F2F2F2;
+}
+.border-r-blue{
+    border-right: 2px solid #5A8ED6;
+}
+.border-r-orange{
+    border-right:2px solid #F7A344;
+}
+.border-r-orange-4{
+    border-right:4px solid #F5901F;
+}
+.border-r-green{
+    border-right:2px solid #52C41A;
+}
+.border-r-red{
+    border-right:2px solid #FF4D4F;
+}
 /* background */
 .bg-main {
     background-color: #2658A8;
@@ -326,7 +368,9 @@ a {
 .rounded-16 {
     border-radius: 16px;
 }
-
+.rounded-24 {
+    border-radius: 24px;
+}
 .rounded-l-24{
     border-top-left-radius: 24px;
     border-bottom-left-radius: 24px;
@@ -337,6 +381,10 @@ a {
 .rounded-r-60{
     border-top-right-radius: 60px;
     border-bottom-right-radius: 60px;
+}
+/* overflow */
+.overflow-y-scroll{
+    overflow-y: scroll;
 }
 /* object-cover */
 .object-cover{
@@ -373,6 +421,9 @@ input[type=number] {
 @media (max-width: 992px) {
     .h-lg-auto{
         height: auto;
+    }
+    aside{
+        position: fixed;
     }
 }
 
