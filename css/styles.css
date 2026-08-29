@@ -386,6 +386,9 @@ a {
 .text-green{
     color: #52C41A;
 }
+.text-warning2{
+    color: #FAAD14;
+}
 .text-black2 {
     color: #272727;
 }
@@ -494,6 +497,9 @@ a {
 .bg-orange{
     background-color: #F5901F;
 }
+.bg-warning2{
+    background-color: #FFFBE6;
+}
 .bg-green{
     background-color: #F6FFED;
 }
@@ -576,6 +582,12 @@ input[type=number] {
     .w-xl-44 {
         width: 44%;
     }
+    .fs-xl-12{
+        font-size: 12px;
+    }
+    .fs-xl-10{
+        font-size: 10px;
+    }
 }
 
 @media (max-width: 992px) {
@@ -639,6 +651,12 @@ input[type=number] {
     }
     .fs-sm-16{
         font-size: 16px;
+    }
+      .fs-sm-14{
+        font-size: 14px;
+    }
+       .fs-sm-10{
+        font-size: 10px;
     }
 }
 

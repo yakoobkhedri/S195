@@ -27,3 +27,6 @@ accordionBtn.forEach((item)=>{
         item.nextElementSibling.classList.toggle('active');
     })
 })
+
+// calender
+
