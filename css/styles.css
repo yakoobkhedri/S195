@@ -846,7 +846,9 @@ input[type=number] {
     .fs-sm-14 {
         font-size: 14px;
     }
-
+     .fs-sm-12 {
+        font-size: 12px;
+    }
     .fs-sm-10 {
         font-size: 10px;
     }
@@ -858,6 +860,9 @@ input[type=number] {
     .max-w-sm-100 {
         max-width: 100%;
         width: 100%;
+    }
+    .p-sm-20{
+        padding: 20px;
     }
 }
 

@@ -172,7 +172,7 @@
         <div
           class="modal-footer p-0 border-top-0 d-flex align-items-center justify-content-center gap-2 flex-wrap mt-40 fw-bold">
           <button type="button" class="btn bg-main text-white h-48 rounded-8 w-161 hover1">تایید</button>
-          <button type="button" class="btn btn-outline-dark rounded-8 w-161 h-48 text-black2"
+          <button type="button" class="btn btn-outline-dark rounded-8 border-gray4 w-161 h-48 text-gray"
             data-bs-dismiss="modal">انصراف</button>
         </div>
       </div>
@@ -190,7 +190,25 @@
         <div
           class="modal-footer p-0 border-top-0 d-flex align-items-center justify-content-center gap-2 flex-wrap mt-40 fw-bold">
           <button type="button" class="btn bg-main text-white h-48 rounded-8 w-161 hover1">بله</button>
-          <button type="button" class="btn btn-outline-dark rounded-8 w-161 h-48 text-black2"
+          <button type="button" class="btn btn-outline-dark rounded-8 border-gray4 w-161 h-48 text-gray"
+            data-bs-dismiss="modal">خیر</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- sabt Modal -->
+  <div class="modal fade" id="sabtModal" tabindex="-1" aria-labelledby="jobModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered max-w-572 mx-auto">
+      <div class="modal-content rounded-32 rounded-sm-16 p-sm-4 p-3">
+        <div class="modal-body p-0">
+          <img alt="icon" src="images/icons/Frame 1000005347.svg" class="mx-auto d-block">
+          <h4 class="fw-Medium fs-20 fs-sm-16 mb-0 text-center mt-32">آیا از ثبت اطلاعات اطمینان دارید؟</h4>
+        </div>
+        <div
+          class="modal-footer p-0 border-top-0 d-flex align-items-center justify-content-center gap-2 flex-wrap mt-40 fw-bold">
+          <button type="button" class="btn bg-main text-white h-48 rounded-8 w-161 hover1">بله</button>
+          <button type="button" class="btn btn-outline-dark rounded-8 border-gray4 w-161 h-48 text-gray"
             data-bs-dismiss="modal">خیر</button>
         </div>
       </div>
@@ -335,7 +353,7 @@
           <span class="fw-bold text-main">مشاهده شکایت</span>
         </div>
         <div class="bg-white rounded-24 p-md-4 p-3">
-          <div>
+          <div class="mb-3 mb-lg-0">
             <svg xmlns="http://www.w3.org/2000/svg" id="openSidebar" width="28" height="28" fill="currentColor"
               class="bi bi-list cursor-pointer d-lg-none flex-shrink-0" viewBox="0 0 16 16">
               <path fill-rule="evenodd"
@@ -344,7 +362,7 @@
             </svg>
           </div>
           <div class="fw-Medium mb-2 bg-input drop-shadow-1 rounded-16">
-            <div class="accordion-btn p-40 cursor-pointer d-flex align-items-center fs-20 fw-bold gap-2">
+            <div class="accordion-btn p-40 p-sm-20 cursor-pointer d-flex align-items-center fs-20 fs-sm-16 fw-bold gap-2">
               <span>اطلاعات شکایت</span>
               <svg class="flex-shrink-0 me-auto" width="8" height="5" viewBox="0 0 8 5" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -353,14 +371,14 @@
               </svg>
             </div>
             <div class="accordion-content">
-              <div class="p-40 pt-0">
+              <div class="p-40 pt-0 p-sm-20">
                 <div class="d-flex align-items-center gap-4 flex-wrap">
-                  <div class="d-flex align-items-center gap-2 rounded-8 py-2 px-3 bg-input2">
+                  <div class="d-flex align-items-center gap-2 rounded-8 py-2 px-3 bg-input2 flex-wrap fs-sm-14">
                     <img alt="icon" src="images/icons/icon (7).svg" class="flex-shrink-0">
                     <span class="fw-bold text-black2">تاریخ آخرین بروز رسانی:</span>
                     <span class="text-black3 fw-Medium">1404/11/05</span>
                   </div>
-                  <div class="d-flex align-items-center gap-2 rounded-8 py-2 px-3 bg-input2">
+                  <div class="d-flex align-items-center gap-2 rounded-8 py-2 px-3 bg-input2 flex-wrap fs-sm-14">
                     <img alt="icon" src="images/icons/icon (8).svg" class="flex-shrink-0">
                     <span class="fw-bold text-black2">وضعیت شکایت:</span>
                     <span class="text-warning2 fw-Medium">در انتظار پاسخ اپراتور</span>
@@ -425,7 +443,7 @@
             </div>
           </div>
           <div class="fw-Medium mb-2 bg-gray drop-shadow-1 rounded-16 mt-40">
-            <div class="accordion-btn p-40 cursor-pointer d-flex align-items-center fs-20 fw-bold gap-2">
+            <div class="accordion-btn p-40 p-sm-20 cursor-pointer d-flex align-items-center fs-20 fs-sm-16 fw-bold gap-2">
               <span>سوابق گفت و گو</span>
               <svg class="flex-shrink-0 me-auto" width="8" height="5" viewBox="0 0 8 5" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -434,33 +452,33 @@
               </svg>
             </div>
             <div class="accordion-content">
-              <p class="fw-Medium text-black3 mb-0 px-5">در این بخش شما می‌توانید تمام سوابق گفت و گو را ببینید.</p>
-              <div class="mt-4 p-40">
+              <p class="fw-Medium text-black3 mb-0 px-sm-5 px-3 fs-sm-14">در این بخش شما می‌توانید تمام سوابق گفت و گو را ببینید.</p>
+              <div class="mt-4 p-40 p-sm-20">
                 <div>
-                  <div class="me-4">
+                  <div class="me-sm-4 me-2">
                     <div class="d-flex align-items-start gap-2 position-relative -bottom-14 -right-20">
                       <img alt="icon" src="images/icons/box.svg" class="flex-shrink-0">
                       <span class="fw-bold fs-14 text-black3">اپراتور</span>
                       <span class="fs-12 text-gray fw-Medium">30 روز گذشته</span>
                     </div>
-                    <div class="rounded-16 bg-input2 border-gray4 py-4 px-12 text-justify fs-14 fw-Medium">
+                    <div class="rounded-16 bg-input2 border-gray4 py-4 px-12 text-justify fs-14 fs-sm-12 fw-Medium">
                       سلام، لطفا جهت تکمیل فرآیند ثبت شکایت، آدر دقیق موقعیت خود را ارسال نمایید.
                     </div>
                   </div>
-                  <div class="mt-4 ms-4">
+                  <div class="mt-4 ms-sm-4 ms-2">
                     <div class="d-flex align-items-start justify-content-end gap-2 position-relative -bottom-14 -left-20">
                       <span class="fs-12 text-gray fw-Medium">29 روز گذشته</span>
                       <span class="fw-bold fs-14 text-black3">شاکی</span>
                       <img alt="icon" src="images/icons/box (2).svg" class="flex-shrink-0">
                     </div>
-                    <div class="rounded-16 bg-input2 border-gray4 py-4 px-12 text-justify fs-14 fw-Medium">
+                    <div class="rounded-16 bg-input2 border-gray4 py-4 px-12 text-justify fs-14 fs-sm-12 fw-Medium">
                      سلام، تهران، اشرفی اصفهانی، پونک، بلوار همیلا، جنب همیلا سنتر
                     </div>
                   </div>
                 </div>
                 <form class="mt-40 bg-white rounded-16 border-input">
-                  <div class="d-flex align-items-center gap-3 p-3 border-b-gray3">
-                    <input placeholder="متن پیام خود را بنویسید ..." class="flex-grow-1 outline-none border-0 bg-white">
+                  <div class="d-flex align-items-center gap-3 p-3 px-2 px-sm-3 border-b-gray3 flex-wrap flex-sm-nowrap">
+                    <input placeholder="متن پیام خود را بنویسید ..." class="flex-grow-1 w-100 fs-sm-14 outline-none border-0 bg-white">
                     <img alt="icon" src="images/icons/Frame 1890164359.svg"
                       class="flex-shrink-0 cursor-pointer me-auto">
                     <div class="position-relative w-24 h-24 cursor-pointer">
@@ -469,7 +487,7 @@
                       <img alt="icon" src="images/icons/Frame 1890164358.svg" class="flex-shrink-0 cursor-pointer">
                     </div>
                   </div>
-                  <div class="d-flex align-items-center justify-content-end gap-3 p-3">
+                  <div class="d-flex align-items-center justify-content-end gap-3 p-3 px-2 px-sm-3">
                     <div class="position-relative w-32 h-32 cursor-pointer">
                       <input type="submit"
                         class="position-absolute cursor-pointer z-10 end-0 top-0 bottom-0 start-0 w-100 h-100 opacity-none">
@@ -481,7 +499,7 @@
             </div>
           </div>
           <div class="fw-Medium mb-2 bg-gray drop-shadow-1 rounded-16 mt-40">
-            <div class="accordion-btn p-40 cursor-pointer d-flex align-items-center fs-20 fw-bold gap-2">
+            <div class="accordion-btn p-40 p-sm-20 cursor-pointer d-flex align-items-center fs-20 fs-sm-16 fw-bold gap-2">
               <span>تعیین وضعیت</span>
               <svg class="flex-shrink-0 me-auto" width="8" height="5" viewBox="0 0 8 5" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -490,10 +508,10 @@
               </svg>
             </div>
             <div class="accordion-content">
-              <div class="p-40 pt-0">
-                <div class="d-flex align-items-center gap-2">
+              <div class="p-40 pt-0 p-sm-20">
+                <div class="d-flex align-items-center gap-2 flex-wrap flex-sm-nowrap">
                   <img alt="icon" src="images/icons/Frame 1000005346 (2).svg" class="flex-shrink-0">
-                  <p class="fs-20 mb-0 fw-Medium text-justify text-black3">
+                  <p class="fs-20 fs-sm-16 mb-0 fw-Medium text-justify text-black3">
                     در صورتی که اطلاعات ثبت شده توسط شاکی صحیح نمی‌باشد با انتخاب “عدم تطبیق اطلاعات شکایت” اطلاعات صحیح
                     را وارد نمایید. با انتخاب گزینه درخواست شکایت جهت تایید تغییر اطلاعات به منطقه مربوطه ارسال می‌شود و
                     پس از تایید مجددا جهت ادامه روند بررسی شکایت به اپراتور مربوطه ارجاع می‌شود.
@@ -510,7 +528,27 @@
                   </label>
                 </div>
                 <form class="mt-40">
-                  <div class="d-flex align-items-end gap-3 flex-grow-1 flex-wrap">
+                   <div class="d-flex align-items-end gap-3 flex-grow-1 flex-wrap">
+                    <div class="max-w-330 max-w-sm-100">
+                      <label class="fs-14 fw-bold mb-2 d-block">نوع شکایت</label>
+                      <select
+                        class="text-center h-48 w-100 border-input px-12 bg-input rounded-8 d-block fs-14 fw-Medium">
+                        <option>انتخاب کنید</option>
+                        <option>انتخاب کنید</option>
+                        <option>انتخاب کنید</option>
+                      </select>
+                    </div>
+                    <div class="max-w-330 max-w-sm-100">
+                      <label class="fs-14 fw-bold mb-2 d-block">موضوع شکایت</label>
+                      <select
+                        class="text-center h-48 w-100 border-input px-12 bg-input rounded-8 d-block fs-14 fw-Medium">
+                        <option>انتخاب کنید</option>
+                        <option>انتخاب کنید</option>
+                        <option>انتخاب کنید</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-end gap-3 flex-grow-1 flex-wrap mt-40">
                     <div class="max-w-330 max-w-sm-100">
                       <label class="fs-14 fw-bold mb-2 d-block">اعلام نظر</label>
                       <select
@@ -536,8 +574,8 @@
                     <textarea rows="6" class="outline-none p-2 w-100 border-input bg-input rounded-8 fs-14 fw-Medium"
                       placeholder="متن پاسخ نهایی را وارد کنید ..."></textarea>
                   </div>
-                  <button disabled=""
-                    class="bg-main text-white hover1 mt-40 me-auto w-sm-100 max-w-330 h-48 rounded-8 fw-bold d-flex align-items-center justify-content-center border-0 btnsubmit">ثبت</button>
+                  <div data-bs-toggle="modal" data-bs-target="#sabtModal"
+                    class="bg-main text-white hover1 mt-40 me-auto w-sm-100 max-w-330 h-48 rounded-8 fw-bold d-flex align-items-center justify-content-center border-0 btnsubmit">ثبت</div>
                 </form>
               </div>
             </div>
