@@ -58,13 +58,18 @@ a {
 .newMessage {
     background-color: #FDEDDA !important;
 }
-
-.newMessage>div:first-child {
+.newMessage2{
+    background-color: #F3F6FC !important;
+}
+.newMessage>div:first-child,.newMessage2>div:first-child {
     display: flex !important;
 }
 
 .newMessage svg path {
-    stroke: #F5901F
+    stroke: #F5901F;
+}
+.newMessage2 svg path {
+    stroke: #5A8ED6;
 }
 /* shadow */
 .drop-shadow-1{
@@ -242,7 +247,19 @@ select {
 .pagination a:hover svg path {
     fill: white;
 }
-
+/* swiper */
+.swiper-pagination-bullet{
+    width: 16px !important;
+    height: 16px !important;
+    background-color: #E5EBF9;
+    opacity: 100%;
+    border-radius: 100px;
+    transition: all .4s;
+}
+.swiper-pagination-bullet-active{
+     width: 64px !important;
+    background-color: #356FC2;
+}
 /* calander */
 .datepicker-plot-area .datepicker-day-view .table-days td span {
     width: 36px !important;
@@ -416,7 +433,9 @@ select {
 .w-48 {
     width: 48px;
 }
-
+.w-62 {
+    width: 62px;
+}
 .w-63 {
     width: 63px;
 }
@@ -442,7 +461,9 @@ select {
 .h-48 {
     height: 48px;
 }
-
+.h-62 {
+    height: 62px;
+}
 .h-93vh {
     height: 93vh;
 }
@@ -450,7 +471,9 @@ select {
 .h-100vh {
     height: 100vh;
 }
-
+.h-220 {
+    height: 220px;
+}
 .h-232 {
     height: 232px;
 }
@@ -649,7 +672,9 @@ select {
 .bg-main3 {
     background-color: #E5EBF9;
 }
-
+.bg-main4{
+    background-color: #5A8ED6;
+}
 .bg-blue-20 {
     background-color: #1EB4EB33;
 }
@@ -838,7 +863,9 @@ input[type=number] {
     .rounded-sm-16 {
         border-radius: 16px;
     }
-
+     .rounded-sm-8 {
+        border-radius: 8px;
+    }
     .fs-sm-16 {
         font-size: 16px;
     }
@@ -856,7 +883,9 @@ input[type=number] {
     .w-sm-100 {
         width: 100%;
     }
-
+    .h-sm-135{
+        height: 135px;
+    }
     .max-w-sm-100 {
         max-width: 100%;
         width: 100%;

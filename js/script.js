@@ -28,18 +28,15 @@ accordionBtn.forEach((item)=>{
     })
 })
 
-// calender
 
-$('.locale-fa').persianDatepicker({
-    inline: true,
+// swiper
 
-});
-
-$('.locale-en').persianDatepicker({
-    inline: true,
-    calendar:{
-        persian: {
-            locale: 'en'
-        }
-    }
+var banner = new Swiper(".banner", {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  allowTouchMove: true,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+  },
 });
