@@ -58,23 +58,29 @@ a {
 .newMessage {
     background-color: #FDEDDA !important;
 }
-.newMessage2{
+
+.newMessage2 {
     background-color: #F3F6FC !important;
 }
-.newMessage>div:first-child,.newMessage2>div:first-child {
+
+.newMessage>div:first-child,
+.newMessage2>div:first-child {
     display: flex !important;
 }
 
 .newMessage svg path {
     stroke: #F5901F;
 }
+
 .newMessage2 svg path {
     stroke: #5A8ED6;
 }
+
 /* shadow */
-.drop-shadow-1{
+.drop-shadow-1 {
     box-shadow: 0px 0px 13px 0px #AFAFAF40;
 }
+
 /* tab */
 .nav-link,
 .nav-link:focus,
@@ -217,9 +223,11 @@ a {
     border: 2px solid #FF4D4F;
     color: #272727;
 }
+
 .hover8:hover {
     background-color: #e63033;
 }
+
 /* checkbox */
 .form-check-input:checked {
     background-color: #5A8ED6;
@@ -247,8 +255,9 @@ select {
 .pagination a:hover svg path {
     fill: white;
 }
+
 /* swiper */
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
     width: 16px !important;
     height: 16px !important;
     background-color: #E5EBF9;
@@ -256,9 +265,31 @@ select {
     border-radius: 100px;
     transition: all .4s;
 }
-.swiper-pagination-bullet-active{
-     width: 64px !important;
+
+.swiper-pagination-bullet-active {
+    width: 64px !important;
     background-color: #356FC2;
+}
+
+/* step */
+.step.active {
+    color: #2658A8;
+    font-weight: bold;
+}
+
+.step.active>div>div {
+    border: 4.36px solid #2658A8;
+}
+
+.step.active>div>div svg path {
+    stroke: #2658A8;
+}
+
+.step.active svg line {
+    stroke: #2658A8;
+}
+.step > svg {
+    width: 13vw;
 }
 /* calander */
 .datepicker-plot-area .datepicker-day-view .table-days td span {
@@ -426,6 +457,7 @@ select {
 .w-24 {
     width: 24px;
 }
+
 .w-38 {
     width: 38%;
 }
@@ -433,11 +465,17 @@ select {
 .w-48 {
     width: 48px;
 }
+
 .w-62 {
     width: 62px;
 }
+
 .w-63 {
     width: 63px;
+}
+
+.w-70 {
+    width: 70px;
 }
 
 .w-161 {
@@ -448,12 +486,15 @@ select {
 .h-24 {
     height: 24px;
 }
+
 .h-30 {
     height: 30px;
 }
+
 .h-32 {
     height: 32px;
 }
+
 .h-38 {
     height: 38px;
 }
@@ -461,9 +502,15 @@ select {
 .h-48 {
     height: 48px;
 }
+
 .h-62 {
     height: 62px;
 }
+
+.h-70 {
+    height: 70px;
+}
+
 .h-93vh {
     height: 93vh;
 }
@@ -471,9 +518,11 @@ select {
 .h-100vh {
     height: 100vh;
 }
+
 .h-220 {
     height: 220px;
 }
+
 .h-232 {
     height: 232px;
 }
@@ -482,9 +531,11 @@ select {
 .z-0 {
     z-index: 0;
 }
+
 .z-10 {
     z-index: 10;
 }
+
 /* padding */
 .p-10 {
     padding: 10px;
@@ -494,10 +545,12 @@ select {
     padding-top: 10px;
     padding-bottom: 10px;
 }
-.px-12{
+
+.px-12 {
     padding-right: 12px;
     padding-left: 12px;
 }
+
 .p-32 {
     padding: 32px;
 }
@@ -544,9 +597,15 @@ select {
 .text-main {
     color: #164194;
 }
-.text-gray{
+
+.text-gray {
     color: #999999;
 }
+
+.text-gray2 {
+    color: #767676;
+}
+
 .text-blue {
     color: #1EB4EB;
 }
@@ -575,19 +634,27 @@ select {
 .left-8 {
     left: 8px;
 }
+
 .-left-20 {
     left: -20px;
 }
+
 /* right */
 .right-4 {
     right: 4px;
 }
+
 .-right-20 {
     right: -20px;
 }
+
 /* top */
 .top-12 {
     top: 12px;
+}
+
+.top-27 {
+    top: 27px;
 }
 
 /* bottom */
@@ -630,12 +697,15 @@ select {
 .border-b-gray2 {
     border-bottom: 1.5px solid #C6D6F1;
 }
+
 .border-b-gray3 {
     border-bottom: 1px solid #F5F5F5;
 }
-.border-gray4{
+
+.border-gray4 {
     border: 1px solid #EEEEEE;
 }
+
 .border-r-blue {
     border-right: 2px solid #5A8ED6;
 }
@@ -672,9 +742,11 @@ select {
 .bg-main3 {
     background-color: #E5EBF9;
 }
-.bg-main4{
+
+.bg-main4 {
     background-color: #5A8ED6;
 }
+
 .bg-blue-20 {
     background-color: #1EB4EB33;
 }
@@ -706,9 +778,11 @@ select {
 .bg-red {
     background-color: #FFF2F0;
 }
-.bg-danger2{
+
+.bg-danger2 {
     background-color: #FF4D4F;
 }
+
 /* box shadow */
 .shadow-1 {
     box-shadow: 0px 0px 15px 0px #0000001C;
@@ -863,9 +937,11 @@ input[type=number] {
     .rounded-sm-16 {
         border-radius: 16px;
     }
-     .rounded-sm-8 {
+
+    .rounded-sm-8 {
         border-radius: 8px;
     }
+
     .fs-sm-16 {
         font-size: 16px;
     }
@@ -873,9 +949,11 @@ input[type=number] {
     .fs-sm-14 {
         font-size: 14px;
     }
-     .fs-sm-12 {
+
+    .fs-sm-12 {
         font-size: 12px;
     }
+
     .fs-sm-10 {
         font-size: 10px;
     }
@@ -883,14 +961,17 @@ input[type=number] {
     .w-sm-100 {
         width: 100%;
     }
-    .h-sm-135{
+
+    .h-sm-135 {
         height: 135px;
     }
+
     .max-w-sm-100 {
         max-width: 100%;
         width: 100%;
     }
-    .p-sm-20{
+
+    .p-sm-20 {
         padding: 20px;
     }
 }

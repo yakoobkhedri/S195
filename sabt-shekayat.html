@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>ثبت شکایت</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+</head>
+
+<body>
+
+  <!-- message Modal -->
+  <div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="jobModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered max-w-1200 mx-auto">
+      <div class="modal-content rounded-32 rounded-sm-16 p-sm-4 p-3">
+        <div class="modal-header pb-2 border-b-gray p-0">
+          <h6 class="modal-title fw-bold fs-20 fs-sm-16" id="exampleModalLabel">صندوق پیام</h6>
+          <button type="button" class="btn-close fs-12 me-auto ms-3 position-absolute start-0" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body mt-40 p-0">
+          <a
+            class="rounded-16 overflow-hidden newMessage position-relative mb-2 text-black3 fs-20 fs-sm-16 fw-Medium p-3 d-flex align-items-center justify-content-between bg-gray gap-4">
+            <div
+              class="fs-10 fw-Medium text-white d-none align-items-center justify-content-center position-absolute top-0 start-0 w-63 h-30 bg-orange rounded-br-12">
+              پیغام جدید</div>
+            <div>
+              <div class="d-flex align-items-center gap-3 flex-wrap mb-2">
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+                  <span>فرستنده:</span>
+                  <span class="fw-bold">واشقانی-دبیر کمیته</span>
+                </div>
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+                  <span>تاریخ ارسال:</span>
+                  <span class="fw-bold">1404/02/12 - 14:25:00</span>
+                </div>
+              </div>
+              <p class="mb-0">
+                متن پیام: درخواست متقاضی جهت دسترسی به گزارشات روزانه بررسی شد و در حال ایجاد دسترسی می باشد.
+              </p>
+            </div>
+            <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none">
+              <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#2658A8"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M13.2583 15.53L9.73828 12L13.2583 8.46997" stroke="#2658A8" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a
+            class="rounded-16 overflow-hidden position-relative mb-2 text-black3 fs-20 fs-sm-16 fw-Medium p-3 d-flex align-items-center justify-content-between bg-gray gap-4">
+            <div
+              class="fs-10 fw-Medium text-white d-none align-items-center justify-content-center position-absolute top-0 start-0 w-63 h-30 bg-orange rounded-br-12">
+              پیغام جدید</div>
+            <div>
+              <div class="d-flex align-items-center gap-3 flex-wrap mb-2">
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+                  <span>فرستنده:</span>
+                  <span class="fw-bold">واشقانی-دبیر کمیته</span>
+                </div>
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+                  <span>تاریخ ارسال:</span>
+                  <span class="fw-bold">1404/02/12 - 14:25:00</span>
+                </div>
+              </div>
+              <p class="mb-0">
+                متن پیام: درخواست متقاضی جهت دسترسی به گزارشات روزانه بررسی شد و در حال ایجاد دسترسی می باشد.
+              </p>
+            </div>
+            <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none">
+              <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#2658A8"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M13.2583 15.53L9.73828 12L13.2583 8.46997" stroke="#2658A8" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a
+            class="rounded-16 overflow-hidden position-relative mb-2 text-black3 fs-20 fs-sm-16 fw-Medium p-3 d-flex align-items-center justify-content-between bg-gray gap-4">
+            <div
+              class="fs-10 fw-Medium text-white d-none align-items-center justify-content-center position-absolute top-0 start-0 w-63 h-30 bg-orange rounded-br-12">
+              پیغام جدید</div>
+            <div>
+              <div class="d-flex align-items-center gap-3 flex-wrap mb-2">
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+                  <span>فرستنده:</span>
+                  <span class="fw-bold">واشقانی-دبیر کمیته</span>
+                </div>
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+                  <span>تاریخ ارسال:</span>
+                  <span class="fw-bold">1404/02/12 - 14:25:00</span>
+                </div>
+              </div>
+              <p class="mb-0">
+                متن پیام: درخواست متقاضی جهت دسترسی به گزارشات روزانه بررسی شد و در حال ایجاد دسترسی می باشد.
+              </p>
+            </div>
+            <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none">
+              <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#2658A8"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M13.2583 15.53L9.73828 12L13.2583 8.46997" stroke="#2658A8" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a
+            class="rounded-16 overflow-hidden position-relative mb-2 text-black3 fs-20 fs-sm-16 fw-Medium p-3 d-flex align-items-center justify-content-between bg-gray gap-4">
+            <div
+              class="fs-10 fw-Medium text-white d-none align-items-center justify-content-center position-absolute top-0 start-0 w-63 h-30 bg-orange rounded-br-12">
+              پیغام جدید</div>
+            <div>
+              <div class="d-flex align-items-center gap-3 flex-wrap mb-2">
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+                  <span>فرستنده:</span>
+                  <span class="fw-bold">واشقانی-دبیر کمیته</span>
+                </div>
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+                  <span>تاریخ ارسال:</span>
+                  <span class="fw-bold">1404/02/12 - 14:25:00</span>
+                </div>
+              </div>
+              <p class="mb-0">
+                متن پیام: درخواست متقاضی جهت دسترسی به گزارشات روزانه بررسی شد و در حال ایجاد دسترسی می باشد.
+              </p>
+            </div>
+            <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none">
+              <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#2658A8"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M13.2583 15.53L9.73828 12L13.2583 8.46997" stroke="#2658A8" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+        <div
+          class="modal-footer p-0 border-top-0 d-flex align-items-center justify-content-center gap-2 flex-wrap mt-40 fw-bold">
+          <button data-bs-dismiss="modal" type="button"
+            class="btn bg-main text-white h-48 rounded-8 max-w-330 hover1">بازگشت</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- exit Modal -->
+  <div class="modal fade" id="exitModal" tabindex="-1" aria-labelledby="jobModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered max-w-572 mx-auto">
+      <div class="modal-content rounded-32 rounded-sm-16 p-sm-4 p-3">
+        <div class="modal-body p-0">
+          <img alt="icon" src="images/icons/Frame 1000005346.svg" class="mx-auto d-block">
+          <h4 class="fw-Medium fs-20 fs-sm-16 mb-0 text-center mt-32">آیا برای خروج از سامانه اطمینان دارید؟</h4>
+        </div>
+        <div
+          class="modal-footer p-0 border-top-0 d-flex align-items-center justify-content-center gap-2 flex-wrap mt-40 fw-bold">
+          <button type="button" class="btn bg-main text-white h-48 rounded-8 w-161 hover1">بله</button>
+          <button type="button" class="btn btn-outline-dark rounded-8 border-gray4 w-161 h-48 text-gray"
+            data-bs-dismiss="modal">خیر</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- overlay -->
+  <div id="overlay"></div>
+
+  <section>
+    <div class="d-flex gap-4 m-sm-4 m-2 me-lg-0">
+      <!-- sidebar -->
+      <aside id="sidebar"
+        class="overflow-y-scroll position-relative h-93vh max-w-269 d-flex flex-column justify-content-between gap-2 flex-shrink-0 bg-white rounded-l-24 py-40 px-3 px-sm-4">
+        <!-- close sidebar -->
+        <svg id="closeSidebar" class="cursor-pointer position-absolute top-0 start-0 m-3 d-lg-none"
+          xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M18 6L6 18" stroke="#33363F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M6 6L18 18" stroke="#33363F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <!--  -->
+        <div>
+          <a class="d-block"><img alt="logo" src="images/logo.png" class="img-fluid"></a>
+          <div class="mt-4">
+            <ul class="list-unstyled m-0 p-0">
+              <li class="fw-Medium mb-2">
+                <a class="rounded-12 d-flex align-items-center py-10 px-2 gap-2 text-main bg-main-2 hover2">
+                  <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="17" height="20"
+                    viewBox="0 0 17 20" fill="none">
+                    <path
+                      d="M12.28 0H4.72C0.94 0 0 1.01 0 5.04V16.3C0 18.96 1.46 19.59 3.23 17.69L3.24 17.68C4.06 16.81 5.31 16.88 6.02 17.83L7.03 19.18C7.84 20.25 9.15 20.25 9.96 19.18L10.97 17.83C11.69 16.87 12.94 16.8 13.76 17.68C15.54 19.58 16.99 18.95 16.99 16.29V5.04C17 1.01 16.06 0 12.28 0ZM11.34 7.99L10.84 8.5H10.83L7.8 11.53C7.67 11.66 7.4 11.8 7.21 11.82L5.86 12.02C5.37 12.09 5.03 11.74 5.1 11.26L5.29 9.9C5.32 9.71 5.45 9.45 5.58 9.31L8.62 6.28L9.12 5.77C9.45 5.44 9.82 5.2 10.22 5.2C10.56 5.2 10.93 5.36 11.34 5.77C12.24 6.67 11.95 7.38 11.34 7.99Z"
+                      fill="white" />
+                  </svg>
+                  <span>ثبت شکایت</span>
+                </a>
+              </li>
+              <li class="fw-Medium mb-2">
+                <a
+                  class="accordion-btn rounded-12 d-flex align-items-center py-10 pe-2 ps-3 gap-2 text-main bg-main-2 hover2">
+                  <svg class="flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M22 11V17C22 21 21 22 17 22H7C3 22 2 21 2 17V7C2 3 3 2 7 2H8.5C10 2 10.33 2.44 10.9 3.2L12.4 5.2C12.78 5.7 13 6 14 6H17C21 6 22 7 22 11Z"
+                      stroke="#2658A8" stroke-width="1.5" stroke-miterlimit="10" />
+                    <path d="M8 2H17C19 2 20 3 20 5V6.38" stroke="#2658A8" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span>لیست درخواست‌ها</span>
+                </a>
+              </li>
+              <li class="fw-Medium mb-2">
+                <a
+                  class="accordion-btn rounded-12 d-flex align-items-center py-10 pe-2 ps-3 gap-2 text-main bg-main-2 hover2">
+                  <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none">
+                    <path d="M20 11C20 15.97 15.97 20 11 20C6.03 20 2 15.97 2 11C2 6.03 6.03 2 11 2" stroke="#2658A8"
+                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M18.9304 20.6898C19.4604 22.2898 20.6704 22.4498 21.6004 21.0498C22.4504 19.7698 21.8904 18.7198 20.3504 18.7198C19.2104 18.7098 18.5704 19.5998 18.9304 20.6898Z"
+                      stroke="#2658A8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M14 5H20" stroke="#2658A8" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M14 8H17" stroke="#2658A8" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                  <span>استعلام درخواست</span>
+                </a>
+              </li>
+              <li class="fw-Medium mb-2">
+                <a
+                  class="accordion-btn position-relative rounded-12 d-flex align-items-center py-10 pe-2 ps-3 gap-2 text-main bg-main-2 hover2">
+                  <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M17.98 10.79V14.79C17.98 15.05 17.97 15.3 17.94 15.54C17.71 18.24 16.12 19.58 13.19 19.58H12.79C12.54 19.58 12.3 19.7 12.15 19.9L10.95 21.5C10.42 22.21 9.56 22.21 9.03 21.5L7.82999 19.9C7.69999 19.73 7.41 19.58 7.19 19.58H6.79001C3.60001 19.58 2 18.79 2 14.79V10.79C2 7.86001 3.35001 6.27001 6.04001 6.04001C6.28001 6.01001 6.53001 6 6.79001 6H13.19C16.38 6 17.98 7.60001 17.98 10.79Z"
+                      stroke="#2658A8" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M21.9791 6.79001V10.79C21.9791 13.73 20.6291 15.31 17.9391 15.54C17.9691 15.3 17.9791 15.05 17.9791 14.79V10.79C17.9791 7.60001 16.3791 6 13.1891 6H6.78906C6.52906 6 6.27906 6.01001 6.03906 6.04001C6.26906 3.35001 7.85906 2 10.7891 2H17.1891C20.3791 2 21.9791 3.60001 21.9791 6.79001Z"
+                      stroke="#2658A8" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M13.4955 13.25H13.5045" stroke="#2658A8" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M9.9955 13.25H10.0045" stroke="#2658A8" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M6.4955 13.25H6.5045" stroke="#2658A8" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                  <span>ارتباط آنلاین</span>
+                  <div
+                    class="w-48 h-30 fs-10 rounded-br-12 d-flex align-items-center justify-content-center bg-warning2 text-warning2 position-absolute top-0 start-0">
+                    به زودی</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t-gray pt-3">
+          <ul class="list-unstyled p-0 m-0">
+            <li class="mb-2">
+              <a
+                class="active rounded-12 bg-gray hover4 d-flex align-items-center gap-2 px-2 py-10 fw-Medium text-black2 border-r-blue">
+                <img alt="icon" src="images/icons/icon(3).svg" class="flex-shrink-0">
+                <span>ناحیه کاربری</span>
+              </a>
+            </li>
+            <li class="mb-2">
+              <a data-bs-toggle="modal" data-bs-target="#messageModal"
+                class="rounded-12 bg-gray hover5 d-flex align-items-center gap-2 px-2 py-10 fw-Medium text-black2 border-r-orange">
+                <img alt="icon" src="images/icons/icon.svg" class="flex-shrink-0">
+                <span>صندوق پیام</span>
+              </a>
+            </li>
+            <li class="mb-2">
+              <a data-bs-toggle="modal" data-bs-target="#jobModal"
+                class="rounded-12 bg-gray hover6 d-flex align-items-center gap-2 px-2 py-10 fw-Medium text-black2 border-r-green">
+                <img alt="icon" src="images/icons/icon (2).svg" class="flex-shrink-0">
+                <span>جایگاه شغلی</span>
+              </a>
+            </li>
+            <li>
+              <a data-bs-toggle="modal" data-bs-target="#exitModal"
+                class="rounded-12 bg-gray hover7 d-flex align-items-center gap-2 px-2 py-10 fw-Medium text-black2 border-r-red">
+                <img alt="icon" src="images/icons/Icons.svg" class="flex-shrink-0">
+                <span>خروج</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <div class="flex-grow-1 overflow-lg-auto overflow-y-scroll h-93vh h-lg-auto">
+        <div class="bg-white rounded-24 p-md-4 p-3">
+          <svg xmlns="http://www.w3.org/2000/svg" id="openSidebar" width="28" height="28" fill="currentColor"
+            class="bi bi-list cursor-pointer d-lg-none flex-shrink-0 mb-3 mb-lg-0" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5">
+            </path>
+          </svg>
+          <!--  -->
+          <div class="d-flex align-items-center justify-content-center">
+            <div class="d-flex align-items-start text-gray2 fw-Medium step active">
+              <div class="text-center">
+                <div
+                  class="w-70 h-70 rounded-circle mb-2 mx-auto d-flex align-items-center justify-content-center bg-input">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+                    <path
+                      d="M12.1465 29.6915H20.2442C26.9923 29.6915 29.6915 26.9923 29.6915 20.2442V12.1465C29.6915 5.39845 26.9923 2.69922 20.2442 2.69922H12.1465C5.39845 2.69922 2.69922 5.39845 2.69922 12.1465V20.2442C2.69922 26.9923 5.39845 29.6915 12.1465 29.6915Z"
+                      stroke="#767676" stroke-width="2.01923" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M2.69922 17.545H7.77377C8.79948 17.545 9.73071 18.1253 10.1896 19.0431L11.3907 21.4589C12.1465 22.9434 13.4961 22.9434 13.82 22.9434H18.5842C19.6099 22.9434 20.5411 22.3631 21 21.4454L22.2011 19.0296C22.66 18.1118 23.5912 17.5315 24.617 17.5315H29.6645"
+                      stroke="#767676" stroke-width="2.01923" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M13.9551 9.4473H18.4493" stroke="#767676" stroke-width="2.01923" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M12.8223 13.4962H19.5703" stroke="#767676" stroke-width="2.01923" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <span class="fs-20">شکایت</span>
+              </div>
+              <svg class="position-relative top-27" xmlns="http://www.w3.org/2000/svg" width="278" height="2" viewBox="0 0 278 2" fill="none">
+                <line x1="276.291" y1="0.75" x2="0.750366" y2="0.75" stroke="#D9D9D9" stroke-width="1.5"
+                  stroke-linecap="round" stroke-dasharray="5 5" />
+              </svg>
+            </div>
+            <div class="d-flex align-items-start text-gray2 fw-Medium step">
+              <div class="text-center">
+                <div
+                  class="w-70 h-70 rounded-circle mb-2 mx-auto d-flex align-items-center justify-content-center bg-input">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+                    <path
+                      d="M12.1465 29.6915H20.2442C26.9923 29.6915 29.6915 26.9923 29.6915 20.2442V12.1465C29.6915 5.39845 26.9923 2.69922 20.2442 2.69922H12.1465C5.39845 2.69922 2.69922 5.39845 2.69922 12.1465V20.2442C2.69922 26.9923 5.39845 29.6915 12.1465 29.6915Z"
+                      stroke="#767676" stroke-width="2.01923" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M2.69922 17.545H7.77377C8.79948 17.545 9.73071 18.1253 10.1896 19.0431L11.3907 21.4589C12.1465 22.9434 13.4961 22.9434 13.82 22.9434H18.5842C19.6099 22.9434 20.5411 22.3631 21 21.4454L22.2011 19.0296C22.66 18.1118 23.5912 17.5315 24.617 17.5315H29.6645"
+                      stroke="#767676" stroke-width="2.01923" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M13.9551 9.4473H18.4493" stroke="#767676" stroke-width="2.01923" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M12.8223 13.4962H19.5703" stroke="#767676" stroke-width="2.01923" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <span class="fs-20">شکایت</span>
+              </div>
+              <svg class="position-relative top-27" xmlns="http://www.w3.org/2000/svg" width="278" height="2" viewBox="0 0 278 2" fill="none">
+                <line x1="276.291" y1="0.75" x2="0.750366" y2="0.75" stroke="#D9D9D9" stroke-width="1.5"
+                  stroke-linecap="round" stroke-dasharray="5 5" />
+              </svg>
+            </div>
+            <div class="d-flex align-items-start text-gray2 fw-Medium step">
+              <div class="text-center">
+                <div
+                  class="w-70 h-70 rounded-circle mb-2 mx-auto d-flex align-items-center justify-content-center bg-input">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+                    <path
+                      d="M12.1465 29.6915H20.2442C26.9923 29.6915 29.6915 26.9923 29.6915 20.2442V12.1465C29.6915 5.39845 26.9923 2.69922 20.2442 2.69922H12.1465C5.39845 2.69922 2.69922 5.39845 2.69922 12.1465V20.2442C2.69922 26.9923 5.39845 29.6915 12.1465 29.6915Z"
+                      stroke="#767676" stroke-width="2.01923" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M2.69922 17.545H7.77377C8.79948 17.545 9.73071 18.1253 10.1896 19.0431L11.3907 21.4589C12.1465 22.9434 13.4961 22.9434 13.82 22.9434H18.5842C19.6099 22.9434 20.5411 22.3631 21 21.4454L22.2011 19.0296C22.66 18.1118 23.5912 17.5315 24.617 17.5315H29.6645"
+                      stroke="#767676" stroke-width="2.01923" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M13.9551 9.4473H18.4493" stroke="#767676" stroke-width="2.01923" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M12.8223 13.4962H19.5703" stroke="#767676" stroke-width="2.01923" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <span class="fs-20">شکایت</span>
+              </div>
+              <svg class="position-relative top-27" xmlns="http://www.w3.org/2000/svg" width="278" height="2" viewBox="0 0 278 2" fill="none">
+                <line x1="276.291" y1="0.75" x2="0.750366" y2="0.75" stroke="#D9D9D9" stroke-width="1.5"
+                  stroke-linecap="round" stroke-dasharray="5 5" />
+              </svg>
+            </div>
+            <div class="d-flex align-items-start text-gray2 fw-Medium step">
+              <div class="text-center">
+                <div
+                  class="w-70 h-70 rounded-circle mb-2 mx-auto d-flex align-items-center justify-content-center bg-input">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+                    <path
+                      d="M12.1465 29.6915H20.2442C26.9923 29.6915 29.6915 26.9923 29.6915 20.2442V12.1465C29.6915 5.39845 26.9923 2.69922 20.2442 2.69922H12.1465C5.39845 2.69922 2.69922 5.39845 2.69922 12.1465V20.2442C2.69922 26.9923 5.39845 29.6915 12.1465 29.6915Z"
+                      stroke="#767676" stroke-width="2.01923" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M2.69922 17.545H7.77377C8.79948 17.545 9.73071 18.1253 10.1896 19.0431L11.3907 21.4589C12.1465 22.9434 13.4961 22.9434 13.82 22.9434H18.5842C19.6099 22.9434 20.5411 22.3631 21 21.4454L22.2011 19.0296C22.66 18.1118 23.5912 17.5315 24.617 17.5315H29.6645"
+                      stroke="#767676" stroke-width="2.01923" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M13.9551 9.4473H18.4493" stroke="#767676" stroke-width="2.01923" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M12.8223 13.4962H19.5703" stroke="#767676" stroke-width="2.01923" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <span class="fs-20">شکایت</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
