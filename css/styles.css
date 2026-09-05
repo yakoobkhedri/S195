@@ -176,7 +176,8 @@ a {
 .hover5,
 .hover6,
 .hover7,
-.hover8 {
+.hover8,
+.hover9 {
     transition: all .4s;
     cursor: pointer;
 }
@@ -227,7 +228,11 @@ a {
 .hover8:hover {
     background-color: #e63033;
 }
-
+.hover9:hover,
+.hover9.active {
+    border: 2px solid #1677FF;
+    color: #272727;
+}
 /* checkbox */
 .form-check-input:checked {
     background-color: #5A8ED6;
@@ -576,7 +581,9 @@ select {
 .mt-40 {
     margin-top: 40px;
 }
-
+.mt-60 {
+    margin-top: 60px;
+}
 .my-64 {
     margin-top: 64px;
     margin-bottom: 64px;
@@ -609,7 +616,9 @@ select {
 .text-blue {
     color: #1EB4EB;
 }
-
+.text-blue2{
+    color: #1677FF;
+}
 .text-red {
     color: #FF4D4F;
 }
@@ -643,11 +652,15 @@ select {
 .right-4 {
     right: 4px;
 }
-
+.-right-8 {
+    right: -8px;
+}
 .-right-20 {
     right: -20px;
 }
-
+.-right-28 {
+    right: -28px;
+}
 /* top */
 .top-12 {
     top: 12px;
@@ -713,7 +726,9 @@ select {
 .border-r-blue-3 {
     border-right: 3px solid #2658A8;
 }
-
+.border-r-blue2{
+    border-right: 2px solid #1677FF;
+}
 .border-r-orange {
     border-right: 2px solid #F7A344;
 }
@@ -750,7 +765,9 @@ select {
 .bg-blue-20 {
     background-color: #1EB4EB33;
 }
-
+.bg-blue2{
+    background-color: #E6F4FF;
+}
 .bg-gray {
     background-color: #F8F8F8;
 }
