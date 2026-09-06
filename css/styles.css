@@ -146,6 +146,42 @@ a {
     gap: 40px;
 }
 
+/* dropdown */
+
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    background-color: #F8F8F8;
+    content: "";
+    width: 18px;
+    height: 18px;
+    left: 23px;
+    top: 39px;
+    border-radius: 2px;
+    position: absolute;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -o-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
+    -webkit-transition: all 0.2s ease 0s;
+    -moz-transition: all 0.2s ease 0s;
+}
+
+.dropdown-menu::before {
+    left: 0;
+    top: auto;
+    z-index: -1;
+    bottom: -6px;
+    right: 0;
+    margin: auto;
+}
+
+.dropdown-menu {
+    /* transform: translate(-95px, -56px) !important; */
+}
+
 /* accordion */
 .accordion-btn svg {
     transition: all .4s;
@@ -228,11 +264,13 @@ a {
 .hover8:hover {
     background-color: #e63033;
 }
+
 .hover9:hover,
 .hover9.active {
     border: 2px solid #1677FF;
     color: #272727;
 }
+
 /* checkbox */
 .form-check-input:checked {
     background-color: #5A8ED6;
@@ -293,9 +331,11 @@ select {
 .step.active svg line {
     stroke: #2658A8;
 }
-.step > svg {
+
+.step>svg {
     width: 13vw;
 }
+
 /* calander */
 .datepicker-plot-area .datepicker-day-view .table-days td span {
     width: 36px !important;
@@ -386,6 +426,14 @@ select {
     cursor: default;
 }
 
+.senBtn:disabled {
+    cursor: default !important;
+}
+
+.senBtn:disabled svg rect {
+    fill: #E8E8E8;
+}
+
 /* font size */
 .fs-8 {
     font-size: 8px;
@@ -453,6 +501,11 @@ select {
     width: 100%;
 }
 
+.max-w-796 {
+    max-width: 796px;
+    width: 100%;
+}
+
 .max-w-1200 {
     max-width: 1200px;
     width: 100%;
@@ -465,6 +518,10 @@ select {
 
 .w-38 {
     width: 38%;
+}
+
+.w-40 {
+    width: 40px;
 }
 
 .w-48 {
@@ -487,6 +544,10 @@ select {
     width: 161px;
 }
 
+.w-187 {
+    width: 187px;
+}
+
 /* height */
 .h-24 {
     height: 24px;
@@ -502,6 +563,10 @@ select {
 
 .h-38 {
     height: 38px;
+}
+
+.h-40 {
+    height: 40px;
 }
 
 .h-48 {
@@ -569,6 +634,10 @@ select {
     padding-bottom: 40px;
 }
 
+.p-80 {
+    padding: 80px;
+}
+
 /* margin */
 .mt-32 {
     margin-top: 32px;
@@ -581,9 +650,11 @@ select {
 .mt-40 {
     margin-top: 40px;
 }
+
 .mt-60 {
     margin-top: 60px;
 }
+
 .my-64 {
     margin-top: 64px;
     margin-bottom: 64px;
@@ -616,9 +687,11 @@ select {
 .text-blue {
     color: #1EB4EB;
 }
-.text-blue2{
+
+.text-blue2 {
     color: #1677FF;
 }
+
 .text-red {
     color: #FF4D4F;
 }
@@ -652,15 +725,19 @@ select {
 .right-4 {
     right: 4px;
 }
+
 .-right-8 {
     right: -8px;
 }
+
 .-right-20 {
     right: -20px;
 }
+
 .-right-28 {
     right: -28px;
 }
+
 /* top */
 .top-12 {
     top: 12px;
@@ -726,9 +803,11 @@ select {
 .border-r-blue-3 {
     border-right: 3px solid #2658A8;
 }
-.border-r-blue2{
+
+.border-r-blue2 {
     border-right: 2px solid #1677FF;
 }
+
 .border-r-orange {
     border-right: 2px solid #F7A344;
 }
@@ -765,9 +844,11 @@ select {
 .bg-blue-20 {
     background-color: #1EB4EB33;
 }
-.bg-blue2{
+
+.bg-blue2 {
     background-color: #E6F4FF;
 }
+
 .bg-gray {
     background-color: #F8F8F8;
 }
@@ -803,6 +884,14 @@ select {
 /* box shadow */
 .shadow-1 {
     box-shadow: 0px 0px 15px 0px #0000001C;
+}
+
+.shadow-2 {
+    box-shadow: 13px 32px 42px 10px #33333333;
+}
+
+.shadow-3 {
+    box-shadow: 0px 2px 4px -2px #1018280F;
 }
 
 /* border radius */
@@ -888,6 +977,9 @@ input[type=number] {
     .fs-xl-10 {
         font-size: 10px;
     }
+    .step>svg {
+    width: 11vw;
+}
 }
 
 @media (max-width: 992px) {
@@ -924,7 +1016,15 @@ input[type=number] {
     .fs-lg-16 {
         font-size: 16px;
     }
-
+    .-right-lg-14{
+        right: -14px;
+    }
+     .-right-lg-8{
+        right: -8px;
+    }
+       .-right-lg-1{
+        right: -1px;
+    }
     #overlay {
         position: fixed;
         inset: 0;
@@ -988,8 +1088,15 @@ input[type=number] {
         width: 100%;
     }
 
+    .p-sm-26 {
+        padding: 26px;
+    }
+
     .p-sm-20 {
         padding: 20px;
+    }
+    .position-sm-static{
+        position: static !important;
     }
 }
 
