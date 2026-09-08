@@ -213,7 +213,9 @@ a {
 .hover6,
 .hover7,
 .hover8,
-.hover9 {
+.hover9,
+.hoverClose,
+.hoverClose path {
     transition: all .4s;
     cursor: pointer;
 }
@@ -270,7 +272,9 @@ a {
     border: 2px solid #1677FF;
     color: #272727;
 }
-
+.hoverClose:hover path{
+    stroke: #FF4D4F;
+}
 /* checkbox */
 .form-check-input:checked {
     background-color: #5A8ED6;
@@ -543,7 +547,9 @@ select {
 .w-161 {
     width: 161px;
 }
-
+.w-165 {
+    width: 165px;
+}
 .w-187 {
     width: 187px;
 }
@@ -683,7 +689,6 @@ select {
 .text-gray2 {
     color: #767676;
 }
-
 .text-blue {
     color: #1EB4EB;
 }
@@ -711,7 +716,9 @@ select {
 .text-black3 {
     color: #4E4E4E !important;
 }
-
+.text-black4 {
+    color: #4E4E4E;
+}
 /* left */
 .left-8 {
     left: 8px;
