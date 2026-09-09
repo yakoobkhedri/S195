@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/jalalidatepicker.min.css" />
   <link rel="stylesheet" href="css/styles.css" />
 
 </head>
@@ -182,6 +183,32 @@
           <button type="button" class="btn bg-main text-white h-48 rounded-8 w-161 hover1">تایید</button>
           <button type="button" class="btn btn-outline-dark rounded-8 border-dark w-161 h-48 text-gray"
             data-bs-dismiss="modal">خیر</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- map Modal -->
+  <div class="modal fade" id="mapModal" tabindex="-1" aria-labelledby="jobModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered max-w-1200 mx-auto">
+      <div class="modal-content rounded-32 rounded-sm-16 p-sm-4 p-3">
+        <div class="modal-header pb-2 border-b-orange p-0">
+          <h6 class="modal-title fw-bold fs-20 fs-sm-16" id="exampleModalLabel">انتخاب آدرس</h6>
+          <button type="button" class="btn-close fs-12 me-auto ms-3 position-absolute start-0" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body mt-40 p-0">
+          <h5 class="fs-20 fw-Medium text-black3 fs-sm-16 mb-0">لطفا آدرس دقیق دکل نصب شده را در کادر پایین وارد کنید.
+          </h5>
+          <div class="mt-40">
+            <iframe class="rounded-24 overflow-hidden w-100 h-465"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207344.0754342176!2d51.51246591933516!3d35.707740217686975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e00491ff3dcd9%3A0xf0b3697c567024bc!2z2KrZh9ix2KfZhtiMINin2LPYqtin2YYg2KrZh9ix2KfZhtiMINin24zYsdin2YY!5e0!3m2!1sfa!2s!4v1708858730182!5m2!1sfa!2s"
+              style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div
+          class="modal-footer p-0 border-top-0 d-flex align-items-center justify-content-center gap-2 flex-wrap mt-40 fw-bold">
+          <button type="button" class="btn bg-main text-white h-48 rounded-8 max-w-330 hover1">ثبت</button>
         </div>
       </div>
     </div>
@@ -377,7 +404,7 @@
                   stroke-linecap="round" stroke-dasharray="5 5" />
               </svg>
             </div>
-            <div class="d-flex flex-column flex-sm-row align-items-start text-gray2 fw-Medium step">
+            <div class="d-flex flex-column flex-sm-row align-items-start text-gray2 fw-Medium step active">
               <div class="text-center position-relative">
                 <div
                   class="w-70 h-70 rounded-circle mb-2 mx-auto d-flex align-items-center justify-content-center bg-input">
@@ -403,7 +430,7 @@
                   stroke-linecap="round" stroke-dasharray="5 5" />
               </svg>
             </div>
-            <div class="d-flex flex-column flex-sm-row align-items-start text-gray2 fw-Medium step">
+            <div class="d-flex flex-column flex-sm-row align-items-start text-gray2 fw-Medium step active">
               <div class="text-center position-relative">
                 <div
                   class="w-70 h-70 rounded-circle mb-2 mx-auto d-flex align-items-center justify-content-center bg-input">
@@ -581,7 +608,7 @@
               </form>
             </div>
             <!-- step 2 -->
-            <div class="">
+            <div class="d-none">
               <div class="d-flex align-items-center justify-content-between gap-2 flex-wrap">
                 <span class="fs-20 fs-sm-16 fw-Medium text-black3">جهت ادامه ثبت شکایت اطلاعات زیر را تکمیل کنید.</span>
                 <div class="d-flex align-items-center rounded-8 gap-2 fs-14 p-2 p-sm-3 bg-blue2">
@@ -698,14 +725,84 @@
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6">
                       <div>
-                        <label class="fs-14 fw-bold mb-2 d-block text-white">انتخاب آدرس از روی نقشه</label>
+                        <label class="fs-14 fw-bold mb-2 d-block">از تاریخ</label>
                         <div
+                          class="position-relative text-center d-flex align-items-center gap-2 px-12 h-48 w-100 border-input bg-input rounded-8 fs-14 fw-Medium">
+                          <input data-jdp="" type="text" class="bg-input outline-none border-0 flex-grow-1 w-100">
+                          <img alt="icon" src="images/icons/icon (16).svg" class="flex-shrink-0">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                      <div>
+                        <label class="fs-14 fw-bold mb-2 d-block">تا تاریخ</label>
+                        <div
+                          class="position-relative text-center d-flex align-items-center gap-2 px-12 h-48 w-100 border-input bg-input rounded-8 fs-14 fw-Medium">
+                          <input data-jdp="" type="text" class="bg-input outline-none border-0 flex-grow-1 w-100">
+                          <img alt="icon" src="images/icons/icon (16).svg" class="flex-shrink-0">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                      <div>
+                        <label class="fs-14 fw-bold mb-2 d-block">از ساعت</label>
+                        <div
+                          class="position-relative text-center d-flex align-items-center gap-2 px-12 h-48 w-100 border-input bg-input rounded-8 fs-14 fw-Medium">
+                          <input type="text" class="bg-input outline-none border-0 flex-grow-1 w-100">
+                          <img alt="icon" src="images/icons/icon (17).svg" class="flex-shrink-0">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                      <div>
+                        <label class="fs-14 fw-bold mb-2 d-block">تا ساعت</label>
+                        <div
+                          class="position-relative text-center d-flex align-items-center gap-2 px-12 h-48 w-100 border-input bg-input rounded-8 fs-14 fw-Medium">
+                          <input type="text" class="bg-input outline-none border-0 flex-grow-1 w-100">
+                          <img alt="icon" src="images/icons/icon (17).svg" class="flex-shrink-0">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                      <div>
+                        <label class="fs-14 fw-bold mb-2 d-block">کد پیگیری / شماره تیکت پشتیبانی</label>
+                        <input class="h-48 w-100 border-input px-12 bg-input rounded-8 d-block fs-14 fw-Medium">
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                      <div>
+                        <label class="fs-14 fw-bold mb-2 d-block">پلاک</label>
+                        <input class="h-48 w-100 border-input px-12 bg-input rounded-8 d-block fs-14 fw-Medium">
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                      <div>
+                        <label class="fs-14 fw-bold mb-2 d-block">طبقه</label>
+                        <input class="h-48 w-100 border-input px-12 bg-input rounded-8 d-block fs-14 fw-Medium">
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                      <div>
+                        <label class="fs-14 fw-bold mb-2 d-block">واحد</label>
+                        <input class="h-48 w-100 border-input px-12 bg-input rounded-8 d-block fs-14 fw-Medium">
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                      <div>
+                        <label class="fs-14 fw-bold mb-2 d-block text-white">انتخاب آدرس از روی نقشه</label>
+                        <div data-bs-toggle="modal" data-bs-target="#mapModal"
                           class="position-relative text-center cursor-pointer d-flex align-items-center gap-2 px-12 h-48 w-100 border-input bg-input rounded-8 fs-14 fw-Medium">
-                          <input type="file"
+                          <input
                             class="opacity-none cursor-pointer position-absolute w-100 h-100 end-0 bottom-0 start-0 top-0">
                           <span class="flex-grow-1">انتخاب آدرس از روی نقشه</span>
                           <img alt="icon" src="images/icons/icon (15).svg" class="flex-shrink-0">
                         </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div>
+                        <label class="fs-14 fw-bold mb-2 d-block">آدرس محل نصب دکل</label>
+                        <input class="h-48 w-100 border-input px-12 bg-input rounded-8 d-block fs-14 fw-Medium">
                       </div>
                     </div>
                   </div>
@@ -714,6 +811,105 @@
                       class="btn btn-outline-dark rounded-8 border-gray4 w-sm-100 w-165 h-48 text-black4">بازگشت</button>
                     <button disabled
                       class="bg-main text-white hover1 w-sm-100 w-165 h-48 rounded-8 fw-bold d-flex align-items-center justify-content-center border-0 btnsubmit">ادامه</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- step 3 -->
+            <div class="d-none">
+              <div class="d-flex align-items-center justify-content-between gap-2 flex-wrap flex-xl-nowrap">
+                <span class="fs-20 fs-sm-16 fw-Medium text-black3">در صورت تایید متن زیر، شکایت شما ثبت و کد رهگیری جهت
+                  پیگیری شکایت برای شما نمایش داده می شود. در صورت وجود مغایرت به مرحله قبل برگردید.</span>
+                <div class="d-flex align-items-center rounded-8 gap-2 fs-14 p-2 p-sm-3 bg-blue2 flex-shrink-0">
+                  <img alt="icon" src="images/icons/icon (11).svg" class="flex-shrink-0">
+                  <span class="text-black2">در صورت نیاز به راهنما <a class="text-blue2">اینجا کلیک کنید.</a></span>
+                </div>
+              </div>
+              <form class="mt-40">
+                <div>
+                  <div>
+                    <div class="bg-input border-input fs-14 rounded-8 p-2">
+                      <p class="mb-0 text-justify text-black3">
+                        اینجانب دارنده سیم‌کارت دائمی همراه اول، مدتی است در محل سکونت/کار خود با مشکل ضعف شدید آنتن‌دهی
+                        و
+                        اختلال در برقراری تماس و استفاده از اینترنت همراه مواجه هستم. این مشکل باعث شده امکان استفاده
+                        مناسب
+                        از خدمات اپراتور برای بنده فراهم نباشد و در بسیاری از مواقع تماس‌ها قطع شده یا برقرار نمی‌شوند و
+                        کیفیت اینترنت نیز بسیار نامطلوب است.
+                        <br>
+                        با توجه به اینکه این اختلال به‌صورت مستمر در منطقه مورد استفاده بنده وجود دارد، خواهشمند است
+                        موضوع
+                        بررسی شده و نسبت به رفع مشکل پوشش شبکه و بهبود آنتن‌دهی در این محدوده اقدام لازم انجام شود.
+                      </p>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 flex-wrap mt-3">
+                      <div class="d-flex align-items-center gap-2 rounded-8 py-2 px-3 bg-input2 fs-14">
+                        <span class="text-black3">نوع سرویس: اینترنت</span>
+                      </div>
+                      <div class="d-flex align-items-center gap-2 rounded-8 py-2 px-3 bg-input2 fs-14">
+                        <span class="text-black3">سرویس: اینترنت</span>
+                      </div>
+                      <div class="d-flex align-items-center gap-2 rounded-8 py-2 px-3 bg-input2 fs-14">
+                        <span class="text-black3">نوع مشکل: مالی و حقوقی</span>
+                      </div>
+                      <div class="d-flex align-items-center gap-2 rounded-8 py-2 px-3 bg-input2 fs-14">
+                        <span class="text-black3">دسته بندی: صورتحساب</span>
+                      </div>
+                      <div class="d-flex align-items-center gap-2 rounded-8 py-2 px-3 bg-input2">
+                        <img alt="icon" src="images/icons/icon (9).svg" class="flex-shrink-0">
+                        <span class="text-black3">مدارک و مستندات: دارد</span>
+                      </div>
+                      <div class="d-flex align-items-center gap-2 rounded-8 py-2 px-3 bg-input2 fs-14">
+                        <span class="text-black3">اپراتوری: همراه اول</span>
+                      </div>
+                      <div class="d-flex align-items-center gap-2 rounded-8 py-2 px-3 bg-input2 fs-14">
+                        <span class="text-black3">نوع خط: ثابت</span>
+                      </div>
+                      <div class="d-flex align-items-center gap-2 rounded-8 py-2 px-3 bg-input2 fs-14">
+                        <span class="text-black3">شماره همراه: 54 87 987 0912</span>
+                      </div>
+                      <div class="d-flex align-items-center gap-2 rounded-8 py-2 px-3 bg-input2 fs-14">
+                        <span class="text-black3">روستا: تهران</span>
+                      </div>
+                      <div class="d-flex align-items-center gap-2 rounded-8 py-2 px-3 bg-input2 fs-14">
+                        <span class="text-black3">شهرستان: تهران</span>
+                      </div>
+                      <div class="d-flex align-items-center gap-2 rounded-8 py-2 px-3 bg-input2 fs-14">
+                        <span class="text-black3">استان: تهران</span>
+                      </div>
+                      <div class="d-flex align-items-center gap-2 rounded-8 py-2 px-3 bg-input2">
+                        <img alt="icon" src="images/icons/icon (10).svg" class="flex-shrink-0">
+                        <span class="text-black3">موقعیت جغرافیایی: دارد</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-end gap-3 mt-40 flex-wrap">
+                    <button type="button"
+                      class="btn btn-outline-dark rounded-8 border-gray4 w-sm-100 w-165 h-48 text-black4">بازگشت</button>
+                    <button disabled
+                      class="bg-main text-white hover1 w-sm-100 w-165 h-48 rounded-8 fw-bold d-flex align-items-center justify-content-center border-0 btnsubmit">ادامه</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- step 4 -->
+            <div class="">
+              <div class="d-flex align-items-center justify-content-between gap-2 flex-wrap flex-xl-nowrap">
+                <span class="fs-20 fs-sm-16 fw-Medium text-black3">نتیجه و پیگیری‌های بعدی از طریق پیامک یا بازوی 195 در پیامرسان بله به اطلاع شما خواهد رسید.</span>
+              </div>
+              <form class="mt-40">
+                <div>
+                       <div class="col-lg-4 col-md-6">
+                      <div>
+                        <label class="fs-14 fw-bold mb-2 d-block">کد پیگیری / شماره تیکت پشتیبانی</label>
+                        <input class="h-48 w-100 border-input px-12 bg-input rounded-8 d-block fs-14 fw-Medium">
+                      </div>
+                    </div>
+                  <div class="d-flex align-items-center justify-content-end gap-3 mt-40 flex-wrap">
+                    <button type="button"
+                      class="btn btn-outline-dark rounded-8 border-gray4 w-sm-100 w-165 h-48 text-black4">ثبت شکایت جدید</button>
+                    <button
+                      class="bg-main text-white hover1 w-sm-100 w-165 h-48 rounded-8 fw-bold d-flex align-items-center justify-content-center border-0 btnsubmit">پیگیری</button>
                   </div>
                 </div>
               </form>
@@ -727,6 +923,7 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/jalalidatepicker.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 

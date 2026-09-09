@@ -602,7 +602,9 @@ select {
 .h-232 {
     height: 232px;
 }
-
+.h-465 {
+    height: 465px;
+}
 /* z index */
 .z-0 {
     z-index: 0;
@@ -822,7 +824,9 @@ select {
 .border-r-orange-4 {
     border-right: 4px solid #F5901F;
 }
-
+.border-b-orange{
+    border-bottom: 1.5px solid #F7A344;
+}
 .border-r-green {
     border-right: 2px solid #52C41A;
 }

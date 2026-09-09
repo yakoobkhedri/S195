@@ -40,3 +40,7 @@ var banner = new Swiper(".banner", {
     el: ".swiper-pagination",
   },
 });
+
+// datapicker
+
+jalaliDatepicker.startWatch();
