@@ -356,7 +356,9 @@
           </svg>
           <!--  -->
           <div class="d-flex gap-4 gap-sm-0 flex-column flex-sm-row align-items-center justify-content-center">
-            <div class="d-flex flex-column flex-sm-row align-items-start text-gray2 fw-Medium step active">
+            <!-- step 1 -->
+            <div class="d-flex flex-column flex-sm-row align-items-start text-gray2 fw-Medium step active"
+              data-step="1">
               <div class="text-center position-relative">
                 <div
                   class="w-70 h-70 rounded-circle mb-2 mx-auto d-flex align-items-center justify-content-center bg-input">
@@ -381,7 +383,8 @@
                   stroke-linecap="round" stroke-dasharray="5 5" />
               </svg>
             </div>
-            <div class="d-flex flex-column flex-sm-row align-items-start text-gray2 fw-Medium step">
+            <!-- step 2 -->
+            <div class="d-flex flex-column flex-sm-row align-items-start text-gray2 fw-Medium step" data-step="2">
               <div class="text-center position-relative">
                 <div
                   class="w-70 h-70 rounded-circle mb-2 mx-auto d-flex align-items-center justify-content-center bg-input">
@@ -405,7 +408,8 @@
                   stroke-linecap="round" stroke-dasharray="5 5" />
               </svg>
             </div>
-            <div class="d-flex flex-column flex-sm-row align-items-start text-gray2 fw-Medium step">
+            <!-- step 3 -->
+            <div class="d-flex flex-column flex-sm-row align-items-start text-gray2 fw-Medium step" data-step="3">
               <div class="text-center position-relative">
                 <div
                   class="w-70 h-70 rounded-circle mb-2 mx-auto d-flex align-items-center justify-content-center bg-input">
@@ -431,7 +435,8 @@
                   stroke-linecap="round" stroke-dasharray="5 5" />
               </svg>
             </div>
-            <div class="d-flex flex-column flex-sm-row align-items-start text-gray2 fw-Medium step">
+            <!-- step 4 -->
+            <div class="d-flex flex-column flex-sm-row align-items-start text-gray2 fw-Medium step" data-step="4">
               <div class="text-center position-relative">
                 <div
                   class="w-70 h-70 rounded-circle mb-2 mx-auto d-flex align-items-center justify-content-center bg-input">
@@ -455,6 +460,8 @@
               </div>
             </div>
           </div>
+
+          <!-- محتوای مراحل -->
           <div class="mt-60">
             <!-- step 1 -->
             <div class="step1content">
@@ -466,15 +473,14 @@
                   <span class="text-black2">در صورت نیاز به راهنما <a class="text-blue2">اینجا کلیک کنید.</a></span>
                 </div>
               </div>
-              <form class="mt-32">
+              <form class="mt-32" id="step1Form">
                 <div class="mt-40 bg-input rounded-16 border-input">
                   <div class="d-flex align-items-center gap-3 p-3 px-2 px-sm-3 border-b-gray3 flex-wrap flex-sm-nowrap">
-                    <input placeholder="متن شکایت خود را بنویسید ..."
+                    <input id="complaintText" placeholder="متن شکایت خود را بنویسید ..."
                       class="flex-grow-1 text-gray w-100 fs-14 outline-none border-0 bg-input">
                   </div>
                   <div class="d-flex align-items-center justify-content-between gap-3 p-3 px-2 px-sm-3">
-                    <div>
-                      <div class="nav-item dropdown">
+                     <div class="nav-item dropdown">
                         <div
                           class="nav-link dropdown-toggle px-0 text-white d-flex align-items-center gap-1 fs-12 font-bold"
                           href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
@@ -545,10 +551,9 @@
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <button disabled class="border-0 bg-transparent position-relative w-32 h-32 cursor-pointer senBtn">
-                      <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                        viewBox="0 0 32 32" fill="none">
+                    <button type="button" disabled
+                      class="border-0 bg-transparent position-relative w-32 h-32 cursor-pointer senBtn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                         <rect x="32" y="32" width="32" height="32" rx="16" transform="rotate(180 32 32)"
                           fill="#5A8ED6" />
                         <path
@@ -558,9 +563,9 @@
                     </button>
                   </div>
                 </div>
+
                 <div class="mt-32 rounded-8 bg-gray p-3">
-                  <div
-                    class="fs-18 fs-sm-14 d-flex align-items-center gap-2 flex-wrap flex-sm-nowrap text-black3 fw-Medium">
+                  <div class="fs-18 fs-sm-14 d-flex align-items-center gap-2 flex-wrap flex-sm-nowrap text-black3 fw-Medium">
                     <img alt="icon" src="images/icons/icon (12).svg" class="flex-shrink-0">
                     <span>این بخش با استفاده از توضیحات شما و دستیار هوش مصنوعی تکمیل شده ، در صورت مغایرت آن را ویرایش
                       کنید.</span>
@@ -568,49 +573,40 @@
                   <div class="mt-3">
                     <div class="row g-4">
                       <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div>
-                          <label class="fs-14 fw-bold mb-2 d-block">نوع سرویس</label>
-                          <select
-                            class="text-center h-48 w-100 border-input px-12 bg-input rounded-8 d-block fs-14 fw-Medium">
-                            <option>انتخاب کنید</option>
-                            <option>انتخاب کنید</option>
-                            <option>انتخاب کنید</option>
-                          </select>
-                        </div>
+                        <label class="fs-14 fw-bold mb-2 d-block">نوع سرویس</label>
+                        <select id="serviceType"
+                          class="text-center h-48 w-100 border-input px-12 bg-input rounded-8 d-block fs-14 fw-Medium">
+                          <option value="">انتخاب کنید</option>
+                          <option value="internet">اینترنت</option>
+                          <option value="call">تماس</option>
+                        </select>
                       </div>
                       <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div>
-                          <label class="fs-14 fw-bold mb-2 d-block">نوع مشکل</label>
-                          <select
-                            class="text-center h-48 w-100 border-input px-12 bg-input rounded-8 d-block fs-14 fw-Medium">
-                            <option>انتخاب کنید</option>
-                            <option>انتخاب کنید</option>
-                            <option>انتخاب کنید</option>
-                          </select>
-                        </div>
+                        <label class="fs-14 fw-bold mb-2 d-block">نوع مشکل</label>
+                        <select id="problemType"
+                          class="text-center h-48 w-100 border-input px-12 bg-input rounded-8 d-block fs-14 fw-Medium">
+                          <option value="">انتخاب کنید</option>
+                          <option value="financial">مالی و حقوقی</option>
+                          <option value="technical">فنی</option>
+                        </select>
                       </div>
                       <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div>
-                          <label class="fs-14 fw-bold mb-2 d-block">دسته بندی</label>
-                          <select
-                            class="text-center h-48 w-100 border-input px-12 bg-input rounded-8 d-block fs-14 fw-Medium">
-                            <option>انتخاب کنید</option>
-                            <option>انتخاب کنید</option>
-                            <option>انتخاب کنید</option>
-                          </select>
-                        </div>
+                        <label class="fs-14 fw-bold mb-2 d-block">دسته بندی</label>
+                        <select id="category"
+                          class="text-center h-48 w-100 border-input px-12 bg-input rounded-8 d-block fs-14 fw-Medium">
+                          <option value="">انتخاب کنید</option>
+                          <option value="bill">صورتحساب</option>
+                          <option value="support">پشتیبانی</option>
+                        </select>
                       </div>
                     </div>
-                    <button id="gotoStep2" disabled
-                      class="bg-main me-auto text-white mt-32 hover1 w-sm-100 w-161 h-48 rounded-8 fw-bold d-flex align-items-center justify-content-center border-0 btnsubmit">
-                      ادامه</button>
-                    <!-- <div data-bs-toggle="modal" data-bs-target="#shekayatModal"
-                      class="bg-main me-auto text-white mt-32 hover1 w-sm-100 w-161 h-48 rounded-8 fw-bold d-flex align-items-center justify-content-center border-0 btnsubmit">
-                      ادامه</div> -->
+                    <button type="button" id="gotoStep2" disabled
+                      class="bg-main me-auto text-white mt-32 hover1 w-sm-100 w-161 h-48 rounded-8 fw-bold d-flex align-items-center justify-content-center border-0 btnsubmit">ادامه</button>
                   </div>
                 </div>
               </form>
             </div>
+
             <!-- step 2 -->
             <div class="step2content d-none">
               <div class="d-flex align-items-center justify-content-between gap-2 flex-wrap">
@@ -620,15 +616,13 @@
                   <span class="text-black2">در صورت نیاز به راهنما <a class="text-blue2">اینجا کلیک کنید.</a></span>
                 </div>
               </div>
-              <form class="mt-40">
-                <div>
-                  <div class="row g-4">
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                      <div>
-                        <label class="fs-14 fw-bold mb-2 d-block">شماره همراه (مورد شکایت)</label>
-                        <input type="tel" dir="ltr" placeholder="09-- --- -- --"
-                          class="text-center h-48 w-100 border-input px-12 bg-input rounded-8 d-block fs-14 fw-Medium">
-                        <div class="mt-3 d-flex align-items-center gap-3 flex-wrap">
+              <form class="mt-40" id="step2Form">
+                <div class="row g-4">
+                  <div class="col-xl-3 col-lg-4 col-md-6">
+                    <label class="fs-14 fw-bold mb-2 d-block">شماره همراه (مورد شکایت)</label>
+                    <input id="phoneNumber" type="tel" dir="ltr" placeholder="09-- --- -- --"
+                      class="text-center h-48 w-100 border-input px-12 bg-input rounded-8 d-block fs-14 fw-Medium">
+                         <div class="mt-3 d-flex align-items-center gap-3 flex-wrap">
                           <div class="d-flex align-items-center p-2 rounded-8 gap-2 fs-14 text-black3 bg-input2">
                             <img alt="icon" src="images/icons/icon (9).svg" class="flex-shrink-0">
                             <span>قبض گوشی.pdf</span>
@@ -658,31 +652,27 @@
                             </svg>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                      <div>
-                        <label class="fs-14 fw-bold mb-2 d-block">نوع خط</label>
-                        <select
-                          class="text-center h-48 w-100 border-input px-12 bg-input rounded-8 d-block fs-14 fw-Medium">
-                          <option>انتخاب کنید</option>
-                          <option>انتخاب کنید</option>
-                          <option>انتخاب کنید</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                      <div>
-                        <label class="fs-14 fw-bold mb-2 d-block">اپراتوری</label>
-                        <select
-                          class="text-center h-48 w-100 border-input px-12 bg-input rounded-8 d-block fs-14 fw-Medium">
-                          <option>انتخاب کنید</option>
-                          <option>انتخاب کنید</option>
-                          <option>انتخاب کنید</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
+                  </div>
+                  <div class="col-xl-3 col-lg-4 col-md-6">
+                    <label class="fs-14 fw-bold mb-2 d-block">نوع خط</label>
+                    <select id="lineType"
+                      class="text-center h-48 w-100 border-input px-12 bg-input rounded-8 d-block fs-14 fw-Medium">
+                      <option value="">انتخاب کنید</option>
+                      <option value="permanent">دائمی</option>
+                      <option value="credit">اعتباری</option>
+                    </select>
+                  </div>
+                  <div class="col-xl-3 col-lg-4 col-md-6">
+                    <label class="fs-14 fw-bold mb-2 d-block">اپراتوری</label>
+                    <select id="operator"
+                      class="text-center h-48 w-100 border-input px-12 bg-input rounded-8 d-block fs-14 fw-Medium">
+                      <option value="">انتخاب کنید</option>
+                      <option value="mci">همراه اول</option>
+                      <option value="irancell">ایرانسل</option>
+                      <option value="rightel">رایتل</option>
+                    </select>
+                  </div>
+                       <div class="col-xl-3 col-lg-4 col-md-6">
                       <div>
                         <label class="fs-14 fw-bold mb-2 d-block">مدارک و مستندات</label>
                         <div
@@ -694,45 +684,30 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                      <div>
-                        <label class="fs-14 fw-bold mb-2 d-block">استان</label>
-                        <select
-                          class="text-center h-48 w-100 border-input px-12 bg-input rounded-8 d-block fs-14 fw-Medium">
-                          <option>انتخاب کنید</option>
-                          <option>انتخاب کنید</option>
-                          <option>انتخاب کنید</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                      <div>
-                        <label class="fs-14 fw-bold mb-2 d-block">شهرستان</label>
-                        <select
-                          class="text-center h-48 w-100 border-input px-12 bg-input rounded-8 d-block fs-14 fw-Medium">
-                          <option>انتخاب کنید</option>
-                          <option>انتخاب کنید</option>
-                          <option>انتخاب کنید</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                      <div>
-                        <label class="fs-14 fw-bold mb-2 d-block">شهر/روستا</label>
-                        <select
-                          class="text-center h-48 w-100 border-input px-12 bg-input rounded-8 d-block fs-14 fw-Medium">
-                          <option>انتخاب کنید</option>
-                          <option>انتخاب کنید</option>
-                          <option>انتخاب کنید</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
+                  <div class="col-xl-3 col-lg-4 col-md-6">
+                    <label class="fs-14 fw-bold mb-2 d-block">استان</label>
+                    <select id="province"
+                      class="text-center h-48 w-100 border-input px-12 bg-input rounded-8 d-block fs-14 fw-Medium">
+                      <option value="">انتخاب کنید</option>
+                      <option value="tehran">تهران</option>
+                      <option value="isfahan">اصفهان</option>
+                    </select>
+                  </div>
+                  <div class="col-xl-3 col-lg-4 col-md-6">
+                    <label class="fs-14 fw-bold mb-2 d-block">شهرستان</label>
+                    <select id="city"
+                      class="text-center h-48 w-100 border-input px-12 bg-input rounded-8 d-block fs-14 fw-Medium">
+                      <option value="">انتخاب کنید</option>
+                      <option value="tehran">تهران</option>
+                      <option value="karaj">کرج</option>
+                    </select>
+                  </div>
+                   <div class="col-xl-3 col-lg-4 col-md-6">
                       <div>
                         <label class="fs-14 fw-bold mb-2 d-block">از تاریخ</label>
                         <div
                           class="position-relative text-center d-flex align-items-center gap-2 px-12 h-48 w-100 border-input bg-input rounded-8 fs-14 fw-Medium">
-                          <input data-jdp="" type="text" class="bg-input outline-none border-0 flex-grow-1 w-100">
+                          <input data-jdp="" type="text" id="fromDate" class="bg-input outline-none border-0 flex-grow-1 w-100">
                           <img alt="icon" src="images/icons/icon (16).svg" class="flex-shrink-0">
                         </div>
                       </div>
@@ -742,7 +717,7 @@
                         <label class="fs-14 fw-bold mb-2 d-block">تا تاریخ</label>
                         <div
                           class="position-relative text-center d-flex align-items-center gap-2 px-12 h-48 w-100 border-input bg-input rounded-8 fs-14 fw-Medium">
-                          <input data-jdp="" type="text" class="bg-input outline-none border-0 flex-grow-1 w-100">
+                          <input data-jdp="" type="text" id="toDate" class="bg-input outline-none border-0 flex-grow-1 w-100">
                           <img alt="icon" src="images/icons/icon (16).svg" class="flex-shrink-0">
                         </div>
                       </div>
@@ -767,12 +742,11 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                      <div>
-                        <label class="fs-14 fw-bold mb-2 d-block">کد پیگیری / شماره تیکت پشتیبانی</label>
-                        <input class="h-48 w-100 border-input px-12 bg-input rounded-8 d-block fs-14 fw-Medium">
-                      </div>
-                    </div>
+                  <div class="col-xl-3 col-lg-4 col-md-6">
+                    <label class="fs-14 fw-bold mb-2 d-block">کد پیگیری / شماره تیکت پشتیبانی</label>
+                    <input id="ticketCode"
+                      class="h-48 w-100 border-input px-12 bg-input rounded-8 d-block fs-14 fw-Medium">
+                  </div>
                     <div class="col-xl-3 col-lg-4 col-md-6">
                       <div>
                         <label class="fs-14 fw-bold mb-2 d-block">پلاک</label>
@@ -803,133 +777,83 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-12">
-                      <div>
-                        <label class="fs-14 fw-bold mb-2 d-block">آدرس محل نصب دکل</label>
-                        <input class="h-48 w-100 border-input px-12 bg-input rounded-8 d-block fs-14 fw-Medium">
-                      </div>
-                    </div>
+                  <div class="col-12">
+                    <label class="fs-14 fw-bold mb-2 d-block">آدرس محل نصب دکل</label>
+                    <input id="address"
+                      class="h-48 w-100 border-input px-12 bg-input rounded-8 d-block fs-14 fw-Medium">
                   </div>
-                  <div class="d-flex align-items-center justify-content-end gap-3 mt-40 flex-wrap">
-                    <button id="backtoStep1" type="button"
-                      class="btn btn-outline-dark rounded-8 border-gray4 w-sm-100 w-165 h-48 text-black4">بازگشت</button>
-                    <button id="gotoStep3" disabled
-                      class="bg-main text-white hover1 w-sm-100 w-165 h-48 rounded-8 fw-bold d-flex align-items-center justify-content-center border-0 btnsubmit">ادامه</button>
-                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-end gap-3 mt-40 flex-wrap">
+                  <button id="backtoStep1" type="button"
+                    class="btn btn-outline-dark rounded-8 border-gray4 w-sm-100 w-165 h-48 text-black4">بازگشت</button>
+                  <button type="button" id="gotoStep3" disabled
+                    class="bg-main text-white hover1 w-sm-100 w-165 h-48 rounded-8 fw-bold d-flex align-items-center justify-content-center border-0 btnsubmit">ادامه</button>
                 </div>
               </form>
             </div>
+
             <!-- step 3 -->
             <div class="step3content d-none">
               <div class="d-flex align-items-center justify-content-between gap-2 flex-wrap flex-xl-nowrap">
                 <span class="fs-20 fs-sm-16 fw-Medium text-black3">در صورت تایید متن زیر، شکایت شما ثبت و کد رهگیری جهت
-                  پیگیری شکایت برای شما نمایش داده می شود. در صورت وجود مغایرت به مرحله قبل برگردید.</span>
-                <div class="d-flex align-items-center rounded-8 gap-2 fs-14 p-2 p-sm-3 bg-blue2 flex-shrink-0">
+                  پیگیری شکایت برای شما نمایش داده می‌شود.</span>
+                <div class="d-flex align-items-center rounded-8 gap-2 fs-14 p-2 p-sm-3 bg-blue2">
                   <img alt="icon" src="images/icons/icon (11).svg" class="flex-shrink-0">
                   <span class="text-black2">در صورت نیاز به راهنما <a class="text-blue2">اینجا کلیک کنید.</a></span>
                 </div>
               </div>
-              <form class="mt-40">
-                <div>
-                  <div>
-                    <div class="bg-input border-input fs-14 rounded-8 p-2">
-                      <p class="mb-0 text-justify text-black3">
-                        اینجانب دارنده سیم‌کارت دائمی همراه اول، مدتی است در محل سکونت/کار خود با مشکل ضعف شدید آنتن‌دهی
-                        و
-                        اختلال در برقراری تماس و استفاده از اینترنت همراه مواجه هستم. این مشکل باعث شده امکان استفاده
-                        مناسب
-                        از خدمات اپراتور برای بنده فراهم نباشد و در بسیاری از مواقع تماس‌ها قطع شده یا برقرار نمی‌شوند و
-                        کیفیت اینترنت نیز بسیار نامطلوب است.
-                        <br>
-                        با توجه به اینکه این اختلال به‌صورت مستمر در منطقه مورد استفاده بنده وجود دارد، خواهشمند است
-                        موضوع
-                        بررسی شده و نسبت به رفع مشکل پوشش شبکه و بهبود آنتن‌دهی در این محدوده اقدام لازم انجام شود.
-                      </p>
-                    </div>
-                    <div class="d-flex align-items-center gap-2 flex-wrap mt-3">
-                      <div class="d-flex align-items-center gap-2 rounded-8 py-2 px-3 bg-input2 fs-14">
-                        <span class="text-black3">نوع سرویس: اینترنت</span>
-                      </div>
-                      <div class="d-flex align-items-center gap-2 rounded-8 py-2 px-3 bg-input2 fs-14">
-                        <span class="text-black3">سرویس: اینترنت</span>
-                      </div>
-                      <div class="d-flex align-items-center gap-2 rounded-8 py-2 px-3 bg-input2 fs-14">
-                        <span class="text-black3">نوع مشکل: مالی و حقوقی</span>
-                      </div>
-                      <div class="d-flex align-items-center gap-2 rounded-8 py-2 px-3 bg-input2 fs-14">
-                        <span class="text-black3">دسته بندی: صورتحساب</span>
-                      </div>
-                      <div class="d-flex align-items-center gap-2 rounded-8 py-2 px-3 bg-input2">
-                        <img alt="icon" src="images/icons/icon (9).svg" class="flex-shrink-0">
-                        <span class="text-black3">مدارک و مستندات: دارد</span>
-                      </div>
-                      <div class="d-flex align-items-center gap-2 rounded-8 py-2 px-3 bg-input2 fs-14">
-                        <span class="text-black3">اپراتوری: همراه اول</span>
-                      </div>
-                      <div class="d-flex align-items-center gap-2 rounded-8 py-2 px-3 bg-input2 fs-14">
-                        <span class="text-black3">نوع خط: ثابت</span>
-                      </div>
-                      <div class="d-flex align-items-center gap-2 rounded-8 py-2 px-3 bg-input2 fs-14">
-                        <span class="text-black3">شماره همراه: 54 87 987 0912</span>
-                      </div>
-                      <div class="d-flex align-items-center gap-2 rounded-8 py-2 px-3 bg-input2 fs-14">
-                        <span class="text-black3">روستا: تهران</span>
-                      </div>
-                      <div class="d-flex align-items-center gap-2 rounded-8 py-2 px-3 bg-input2 fs-14">
-                        <span class="text-black3">شهرستان: تهران</span>
-                      </div>
-                      <div class="d-flex align-items-center gap-2 rounded-8 py-2 px-3 bg-input2 fs-14">
-                        <span class="text-black3">استان: تهران</span>
-                      </div>
-                      <div class="d-flex align-items-center gap-2 rounded-8 py-2 px-3 bg-input2">
-                        <img alt="icon" src="images/icons/icon (10).svg" class="flex-shrink-0">
-                        <span class="text-black3">موقعیت جغرافیایی: دارد</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="d-flex align-items-center justify-content-end gap-3 mt-40 flex-wrap">
-                    <button id="backtoStep2" type="button"
-                      class="btn btn-outline-dark rounded-8 border-gray4 w-sm-100 w-165 h-48 text-black4">بازگشت</button>
-                    <button id="gotoStep4" disabled
-                      class="bg-main text-white hover1 w-sm-100 w-165 h-48 rounded-8 fw-bold d-flex align-items-center justify-content-center border-0 btnsubmit">ادامه</button>
-                  </div>
+              <form class="mt-40" id="step3Form">
+                <div class="bg-input border-input fs-14 rounded-8 p-2">
+                  <p class="mb-0 text-justify text-black3">
+                    اینجانب دارنده سیم‌کارت دائمی همراه اول، مدتی است در محل سکونت/کار خود با مشکل ضعف شدید آنتن‌دهی و
+                    اختلال در برقراری تماس و استفاده از اینترنت همراه مواجه هستم. این مشکل باعث شده امکان استفاده مناسب
+                    از
+                    خدمات اپراتور برای بنده فراهم نباشد و در بسیاری از مواقع تماس‌ها قطع شده یا برقرار نمی‌شوند و کیفیت
+                    اینترنت نیز بسیار نامطلوب است.
+                    <br>
+                    با توجه به اینکه این اختلال به‌صورت مستمر در منطقه مورد استفاده بنده وجود دارد، خواهشمند است موضوع
+                    بررسی شده و نسبت به رفع مشکل پوشش شبکه و بهبود آنتن‌دهی در این محدوده اقدام لازم انجام شود.
+                  </p>
+                </div>
+                <div class="d-flex align-items-center justify-content-end gap-3 mt-40 flex-wrap">
+                  <button id="backtoStep2" type="button"
+                    class="btn btn-outline-dark rounded-8 border-gray4 w-sm-100 w-165 h-48 text-black4">بازگشت</button>
+                  <button type="button" id="gotoStep4"
+                    class="bg-main text-white hover1 w-sm-100 w-165 h-48 rounded-8 fw-bold d-flex align-items-center justify-content-center border-0 btnsubmit">ادامه</button>
                 </div>
               </form>
             </div>
+
             <!-- step 4 -->
             <div class="step4content d-none">
               <div class="d-flex align-items-center justify-content-between gap-2 flex-wrap flex-xl-nowrap">
                 <span class="fs-20 fs-sm-16 fw-Medium text-black3">نتیجه و پیگیری‌های بعدی از طریق پیامک یا بازوی 195 در
                   پیامرسان بله به اطلاع شما خواهد رسید.</span>
               </div>
-              <form class="mt-40">
-                <div>
-                  <div>
-                    <div class="max-w-572">
-                      <label class="fs-14 fw-bold mb-2 d-block">کد پیگیری / شماره تیکت پشتیبانی</label>
-                      <div
-                        class="h-48 w-100 border-input d-flex align-items-center gap-2 bg-input rounded-8 fs-14 fw-Medium">
-                        <input
-                          class="flex-grow-1 w-100 border-0 px-3 h-48 bg-input rounded-8 d-block fs-sm-12 fs-14 fw-Medium">
-                        <div
-                          class="hover10 flex-shrink-0 d-flex align-items-center justify-content-center text-white gap-2 w-sm-98 w-161 h-48 bg-orange rounded-8 cursor-pointer">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-copy" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                              d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
-                          </svg>
-                          <span>کپی کد</span>
-                        </div>
-                      </div>
+              <form class="mt-40" id="step4Form">
+                <div class="max-w-572">
+                  <label class="fs-14 fw-bold mb-2 d-block">کد پیگیری / شماره تیکت پشتیبانی</label>
+                  <div
+                    class="h-48 w-100 border-input d-flex align-items-center gap-2 bg-input rounded-8 fs-14 fw-Medium">
+                    <input id="trackingCode" readonly
+                      class="flex-grow-1 w-100 border-0 px-3 h-48 bg-input rounded-8 d-block fs-sm-12 fs-14 fw-Medium">
+                    <div id="copyTrackingCode"
+                      class="hover10 flex-shrink-0 d-flex align-items-center justify-content-center text-white gap-2 w-sm-98 w-161 h-48 bg-orange rounded-8 cursor-pointer">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
+                      </svg>
+                      <span>کپی کد</span>
                     </div>
                   </div>
-                  <div class="d-flex align-items-center justify-content-end gap-3 mt-40 flex-wrap">
-                    <button type="button"
-                      class="btn btn-outline-dark rounded-8 border-gray4 w-sm-100 w-165 h-48 text-black4">ثبت شکایت
-                      جدید</button>
-                    <button
-                      class="bg-main text-white hover1 w-sm-100 w-165 h-48 rounded-8 fw-bold d-flex align-items-center justify-content-center border-0 btnsubmit">پیگیری</button>
-                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-end gap-3 mt-40 flex-wrap">
+                  <button type="button" id="newComplaint"
+                    class="btn btn-outline-dark rounded-8 border-gray4 w-sm-100 w-165 h-48 text-black4">ثبت شکایت
+                    جدید</button>
+                  <button type="button" id="followUp"
+                    class="bg-main text-white hover1 w-sm-100 w-165 h-48 rounded-8 fw-bold d-flex align-items-center justify-content-center border-0 btnsubmit">پیگیری</button>
                 </div>
               </form>
             </div>
@@ -944,6 +868,119 @@
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/jalalidatepicker.min.js"></script>
   <script src="js/script.js"></script>
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const steps = document.querySelectorAll('.step');
+  const stepContents = {
+    1: document.querySelector('.step1content'),
+    2: document.querySelector('.step2content'),
+    3: document.querySelector('.step3content'),
+    4: document.querySelector('.step4content'),
+  };
+
+  const gotoStep2 = document.getElementById('gotoStep2');
+  const gotoStep3 = document.getElementById('gotoStep3');
+  const gotoStep4 = document.getElementById('gotoStep4');
+  const backtoStep1 = document.getElementById('backtoStep1');
+  const backtoStep2 = document.getElementById('backtoStep2');
+
+  // مرحله 1
+  const complaintText = document.getElementById('complaintText');
+  const serviceType = document.getElementById('serviceType');
+  const problemType = document.getElementById('problemType');
+  const category = document.getElementById('category');
+
+  // مرحله 2
+  const phoneNumber = document.getElementById('phoneNumber');
+  const lineType = document.getElementById('lineType');
+  const operator = document.getElementById('operator');
+  const province = document.getElementById('province');
+  const city = document.getElementById('city');
+  const address = document.getElementById('address');
+
+  function goToStep(stepNumber) {
+  Object.values(stepContents).forEach(content => content.classList.add('d-none'));
+  stepContents[stepNumber].classList.remove('d-none');
+
+  steps.forEach(step => {
+    const stepNum = parseInt(step.getAttribute('data-step'));
+    if (stepNum <= stepNumber) {
+      step.classList.add('active');
+    } else {
+      step.classList.remove('active');
+    }
+  });
+
+  if (stepNumber === 4) {
+    generateTrackingCode();
+  }
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+  function checkStep1Validity() {
+    const isValid =
+      complaintText.value.trim() !== '' &&
+      serviceType.value !== '' &&
+      problemType.value !== '' &&
+      category.value !== '';
+    gotoStep2.disabled = !isValid;
+  }
+
+  function checkStep2Validity() {
+    const isValid =
+      phoneNumber.value.trim() !== '' &&
+      lineType.value !== '' &&
+      operator.value !== '' &&
+      province.value !== '' &&
+      city.value !== '' &&
+      address.value.trim() !== '';
+    gotoStep3.disabled = !isValid;
+  }
+
+  [complaintText, serviceType, problemType, category].forEach(el => {
+    el.addEventListener('input', checkStep1Validity);
+    el.addEventListener('change', checkStep1Validity);
+  });
+
+  [phoneNumber, lineType, operator, province, city, address].forEach(el => {
+    el.addEventListener('input', checkStep2Validity);
+    el.addEventListener('change', checkStep2Validity);
+  });
+
+  gotoStep2.addEventListener('click', () => goToStep(2));
+  gotoStep3.addEventListener('click', () => goToStep(3));
+  gotoStep4.addEventListener('click', () => goToStep(4));
+backtoStep1.addEventListener('click', () => goToStep(1));
+  backtoStep2.addEventListener('click', () => goToStep(2));
+
+  function generateTrackingCode() {
+    const code = 'TRK-' + Math.floor(100000 + Math.random() * 900000);
+    document.getElementById('trackingCode').value = code;
+  }
+
+  document.getElementById('copyTrackingCode').addEventListener('click', function () {
+    const trackingInput = document.getElementById('trackingCode');
+    trackingInput.select();
+    document.execCommand('copy');
+    alert('کد رهگیری کپی شد!');
+  });
+
+  document.getElementById('newComplaint').addEventListener('click', function () {
+    document.querySelectorAll('form').forEach(form => form.reset());
+    gotoStep2.disabled = true;
+    gotoStep3.disabled = true;
+    goToStep(1);
+  });
+
+  document.getElementById('followUp').addEventListener('click', function () {
+    alert('در حال انتقال به صفحه پیگیری...');
+  });
+
+  checkStep1Validity();
+  checkStep2Validity();
+});
+</script>
 </body>
 
 </html>
