@@ -214,6 +214,8 @@ a {
 .hover7,
 .hover8,
 .hover9,
+.hover10,
+.hover11,
 .hoverClose,
 .hoverClose path {
     transition: all .4s;
@@ -225,7 +227,9 @@ a {
 }
 
 .hover2:hover,
-.hover2.active {
+.hover2.active,
+.hover11:hover,
+.hover11.active  {
     background-color: #2658A8;
     color: white;
 }
@@ -271,6 +275,13 @@ a {
 .hover9.active {
     border: 2px solid #1677FF;
     color: #272727;
+}
+.hover10:hover{
+    background-color: #ea820c;
+}
+.hover11:hover svg path,
+.hover11.active svg path {
+    fill: white;
 }
 .hoverClose:hover path{
     stroke: #FF4D4F;
@@ -494,7 +505,10 @@ select {
     max-width: 330px;
     width: 100%;
 }
-
+.max-w-400 {
+    max-width: 400px;
+    width: 100%;
+}
 .max-w-492 {
     max-width: 492px;
     width: 100%;
@@ -1086,6 +1100,9 @@ input[type=number] {
         font-size: 10px;
     }
 
+    .w-sm-98 {
+        width: 98px;
+    }
     .w-sm-100 {
         width: 100%;
     }
